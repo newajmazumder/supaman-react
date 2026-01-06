@@ -1,4 +1,48 @@
+import { useEffect, useRef, useState } from "react";
+
+const SECTION_IDS = [
+  "tabbed-section-superhuman-mail",
+  "tabbed-section-grammarly",
+  "tabbed-section-coda",
+  "tabbed-section-go",
+];
+
 export default function SuiteSection() {
+  const [activeId, setActiveId] = useState(SECTION_IDS[0]);
+  const sectionRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.target instanceof HTMLElement) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    SECTION_IDS.forEach((id) => {
+      const el = sectionRefs.current[id];
+      if (el) {
+        observer.observe(el);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleNavClick = (id: string) => {
+    const el = sectionRefs.current[id];
+    if (!el) {
+      return;
+    }
+    const offset = 120;
+    const top = el.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: "smooth" });
+    setActiveId(id);
+  };
   return (
     <>
       <section
@@ -21,8 +65,21 @@ export default function SuiteSection() {
                 </span>
               </a>
             </div>
-            <div className="grid_grid__zNBn_ tabbed-section-header_nav__nxFkt">
-              <button className="button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ tabbed-section-header_active__JAG7a">
+            <div
+              className="grid_grid__zNBn_ tabbed-section-header_nav__nxFkt"
+              role="tablist"
+            >
+              <button
+                className={`button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ${
+                  activeId === "tabbed-section-superhuman-mail"
+                    ? " tabbed-section-header_active__JAG7a"
+                    : ""
+                }`}
+                role="tab"
+                aria-selected={activeId === "tabbed-section-superhuman-mail"}
+                aria-controls="tabbed-section-superhuman-mail"
+                onClick={() => handleNavClick("tabbed-section-superhuman-mail")}
+              >
                 <span className="button_buttonContent__3qg6Y">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +93,17 @@ export default function SuiteSection() {
                   </h2>
                 </span>
               </button>
-              <button className="button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ">
+              <button
+                className={`button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ${
+                  activeId === "tabbed-section-grammarly"
+                    ? " tabbed-section-header_active__JAG7a"
+                    : ""
+                }`}
+                role="tab"
+                aria-selected={activeId === "tabbed-section-grammarly"}
+                aria-controls="tabbed-section-grammarly"
+                onClick={() => handleNavClick("tabbed-section-grammarly")}
+              >
                 <span className="button_buttonContent__3qg6Y">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +117,17 @@ export default function SuiteSection() {
                   </h2>
                 </span>
               </button>
-              <button className="button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ">
+              <button
+                className={`button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ${
+                  activeId === "tabbed-section-coda"
+                    ? " tabbed-section-header_active__JAG7a"
+                    : ""
+                }`}
+                role="tab"
+                aria-selected={activeId === "tabbed-section-coda"}
+                aria-controls="tabbed-section-coda"
+                onClick={() => handleNavClick("tabbed-section-coda")}
+              >
                 <span className="button_buttonContent__3qg6Y">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +141,17 @@ export default function SuiteSection() {
                   </h2>
                 </span>
               </button>
-              <button className="button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ">
+              <button
+                className={`button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ${
+                  activeId === "tabbed-section-go"
+                    ? " tabbed-section-header_active__JAG7a"
+                    : ""
+                }`}
+                role="tab"
+                aria-selected={activeId === "tabbed-section-go"}
+                aria-controls="tabbed-section-go"
+                onClick={() => handleNavClick("tabbed-section-go")}
+              >
                 <span className="button_buttonContent__3qg6Y">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +168,13 @@ export default function SuiteSection() {
             </div>
           </header>
           <div className="display-column gap-9x tabbed-section_content__HWPtQ">
-            <div id="tabbed-section-superhuman-mail">
+            <div
+              id="tabbed-section-superhuman-mail"
+              ref={(el) => {
+                sectionRefs.current["tabbed-section-superhuman-mail"] = el;
+              }}
+              style={{ scrollMarginTop: "120px" }}
+            >
               <div className="two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ tabbed-section-content_container__OO3z5">
                 <div
                   className="display-column align-items-stretch justify-content-start two-column_column__I_bC4"
@@ -186,7 +279,13 @@ export default function SuiteSection() {
                 </div>
               </div>
             </div>
-            <div id="tabbed-section-grammarly">
+            <div
+              id="tabbed-section-grammarly"
+              ref={(el) => {
+                sectionRefs.current["tabbed-section-grammarly"] = el;
+              }}
+              style={{ scrollMarginTop: "120px" }}
+            >
               <div className="two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ tabbed-section-content_container__OO3z5">
                 <div
                   className="display-column align-items-stretch justify-content-start two-column_column__I_bC4"
@@ -291,7 +390,13 @@ export default function SuiteSection() {
                 </div>
               </div>
             </div>
-            <div id="tabbed-section-coda">
+            <div
+              id="tabbed-section-coda"
+              ref={(el) => {
+                sectionRefs.current["tabbed-section-coda"] = el;
+              }}
+              style={{ scrollMarginTop: "120px" }}
+            >
               <div className="two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ tabbed-section-content_container__OO3z5">
                 <div
                   className="display-column align-items-stretch justify-content-start two-column_column__I_bC4"
@@ -398,7 +503,13 @@ export default function SuiteSection() {
                 </div>
               </div>
             </div>
-            <div id="tabbed-section-go">
+            <div
+              id="tabbed-section-go"
+              ref={(el) => {
+                sectionRefs.current["tabbed-section-go"] = el;
+              }}
+              style={{ scrollMarginTop: "120px" }}
+            >
               <div className="two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ tabbed-section-content_container__OO3z5">
                 <div
                   className="display-column align-items-stretch justify-content-start two-column_column__I_bC4"

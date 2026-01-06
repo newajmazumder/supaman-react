@@ -6,7 +6,6 @@ import FinalCtaSection from "@/components/sections/FinalCtaSection";
 import GlobalFooter from "@/components/sections/GlobalFooter";
 import GlobalHeader from "@/components/sections/GlobalHeader";
 import HeroBackground from "@/components/sections/HeroBackground";
-import HeroSection from "@/components/sections/HeroSection";
 import ManifestoSection from "@/components/sections/ManifestoSection";
 import NoScriptTag from "@/components/sections/NoScriptTag";
 import SuiteSection from "@/components/sections/SuiteSection";
@@ -68,9 +67,12 @@ export default function Home() {
       <GlobalHeader />
       <main>
         <BannerSection />
-        <HeroSection />
-        <TrustedBySection />
-        <SuiteSection />
+        <div className="page_multiSectionBackground__WAzbj">
+          <div className="content-wrapper_contentWrapper__9WGiY page_withVerticalBars__dpqpG">
+            <TrustedBySection />
+            <SuiteSection />
+          </div>
+        </div>
         <ManifestoSection />
         <FinalCtaSection />
         <GlobalFooter />
