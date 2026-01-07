@@ -1,6 +1,7 @@
 export default function GlobalHeader() {
   return (
     <>
+      {/* Sticky navigation header (styles come from scraped CSS assets). */}
       <header className="header_header__ZwL1v" data-global-header="true">
         <div className="content-wrapper_contentWrapper__9WGiY header_headerContent__DOadP">
           <a className="link_link__AAIEV header_logo__ymBro" href="/">

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import SuperhumanHead, {
   type SuperhumanHeadData,
 } from "./components/SuperhumanHead";
@@ -21,36 +22,37 @@ const headData: SuperhumanHeadData = {
     "Superhuman is the AI productivity suite that gives you superpowers everywhere you work. So you can be more creative, strategic, and impactful.",
   ogUrl: "https://superhuman.com/",
   ogImage:
-    "/assets/superhumanstatic.com/super-funnel/main/public/images/v1/social-share.png",
+    "/assets/images/social-share.png",
   twitterSite: "@Superhuman",
+  // Scraped Superhuman styles that drive header/hero appearance.
   cssLinks: [
-    "/assets/superhumanstatic.com/super-funnel/main/b/0-11350/_next/static/css/d629e4820f855120.css",
-    "/assets/superhumanstatic.com/super-funnel/main/b/0-11350/_next/static/css/de4cc959be6b280a.css",
-    "/assets/superhumanstatic.com/super-funnel/main/b/0-11350/_next/static/css/a02750e403d01ddc.css",
-    "/assets/superhumanstatic.com/super-funnel/main/b/0-11350/_next/static/css/2885cd27d8dd6165.css",
-    "/assets/superhumanstatic.com/super-funnel/main/b/0-11350/_next/static/css/02381610e350f0d4.css",
-    "/assets/superhumanstatic.com/super-funnel/main/b/0-11350/_next/static/css/6b6f0377fd629164.css",
-    "/assets/superhumanstatic.com/super-funnel/main/b/0-11350/_next/static/css/1ef6efeaaa2d35a6.css",
-    "/assets/superhumanstatic.com/super-funnel/main/b/0-11350/_next/static/css/346f277257f21704.css",
-    "/assets/superhumanstatic.com/super-funnel/main/b/0-11350/_next/static/css/a418de78a5aa7129.css",
+    "/styles/reset-theme-base.css",
+    "/styles/layout-header-footer.css",
+    "/styles/sections-tabbed-homepage.css",
+    "/styles/typography-hero-bg.css",
+    "/styles/cta-rich-text.css",
+    "/styles/nav-links.css",
+    "/styles/trusted-by-accordion.css",
+    "/styles/banner.css",
+    "/styles/hero-page.css",
   ],
   fontFaceCss: `@font-face {\n  font-family: "Super Sans";\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url('/assets/superhumanstatic.com/super-funnel/main/public/fonts/v1/SuperSans-Regular.otf') format('opentype');\n}\n\n@font-face {\n  font-family: "Super Sans";\n  font-style: normal;\n  font-weight: 500;\n  font-display: swap;\n  src: url('/assets/superhumanstatic.com/super-funnel/main/public/fonts/v1/SuperSans-Medium.otf') format('opentype');\n}\n\n@font-face {\n  font-family: "Super Sans Mono";\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url('/assets/superhumanstatic.com/super-funnel/main/public/fonts/v1/SuperSans-Regular.otf') format('opentype');\n}\n\n@font-face {\n  font-family: "Super Serif";\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url('/assets/superhumanstatic.com/super-funnel/main/public/fonts/v1/SuperSerif-Regular.otf') format('opentype');\n}\n\n@font-face {\n  font-family: "Super Serif";\n  font-style: italic;\n  font-weight: 400;\n  font-display: swap;\n  src: url('/assets/superhumanstatic.com/super-funnel/main/public/fonts/v1/SuperSerif-RegularItalic.otf') format('opentype');\n}\n\n@font-face {\n  font-family: "Super Serif";\n  font-style: normal;\n  font-weight: 580;\n  font-display: swap;\n  src: url('/assets/superhumanstatic.com/super-funnel/main/public/fonts/v1/SuperSerif-SemiBold.otf') format('opentype');\n}`,
   icons: [
     {
       rel: "icon",
-      href: "/assets/superhumanstatic.com/super-funnel/main/public/images/v1/favicons/superhuman-icon.svg",
+      href: "/assets/images/superhuman-icon.svg",
       sizes: "any",
       type: "image/svg+xml",
     },
     {
       rel: "icon",
-      href: "/assets/superhumanstatic.com/super-funnel/main/public/images/v1/favicons/superhuman-icon-96x96.png",
+      href: "/assets/images/superhuman-icon-96x96.png",
       sizes: "96x96",
       type: "image/png",
     },
     {
       rel: "apple-touch-icon",
-      href: "/assets/superhumanstatic.com/super-funnel/main/public/images/v1/favicons/superhuman-apple-touch-icon.png",
+      href: "/assets/images/superhuman-apple-touch-icon.png",
       sizes: "180x180",
       type: "image/png",
     },
@@ -58,8 +60,59 @@ const headData: SuperhumanHeadData = {
 };
 
 export default function App() {
+  useEffect(() => {
+    const header = document.querySelector<HTMLElement>(
+      '[data-global-header="true"]'
+    );
+    const heroSection = document.querySelector<HTMLElement>(
+      ".page_heroSection__WbWUz"
+    );
+
+    if (!header || !heroSection) {
+      return;
+    }
+
+    let rafId = 0;
+    const updateHeader = () => {
+      rafId = 0;
+      const rect = heroSection.getBoundingClientRect();
+      const height = rect.height || 1;
+      const progress = Math.min(1, Math.max(0, -rect.top / height));
+      const opacity = `${Math.round(progress * 100)}%`;
+
+      header.style.setProperty("--header-opacity", opacity);
+      header.style.setProperty(
+        "--header-has-blur",
+        progress === 0 || progress >= 0.99 ? "initial" : "/* empty string */"
+      );
+      header.style.setProperty(
+        "color-scheme",
+        progress >= 0.6 ? "light" : "dark"
+      );
+    };
+
+    const onScroll = () => {
+      if (rafId) {
+        return;
+      }
+      rafId = window.requestAnimationFrame(updateHeader);
+    };
+
+    updateHeader();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+      }
+    };
+  }, []);
+
   return (
-    <>
+    <div className="page_homepage__4yZNE">
       <SuperhumanHead data={headData} />
       <NoScriptTag />
       <HeroBackground />
@@ -77,6 +130,6 @@ export default function App() {
         <FinalCtaSection />
         <GlobalFooter />
       </main>
-    </>
+    </div>
   );
 }

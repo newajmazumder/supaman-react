@@ -263,12 +263,12 @@ export default function SuiteSection() {
                         loop
                         muted
                         playsInline
-                        poster="/assets/images.ctfassets.net/vwfkeyj6n9ac/6GZdcneKJhk1BOMc4wSVFP/76ff2c85fd93f8171adc15fae2f7df56/mail-fallback.png"
+                        poster="/assets/images/mail-fallback.png"
                         width="1358"
                         height="1336"
                       >
                         <source
-                          src="/assets/superhumanstatic.com/super-funnel/main/public/homepage/Homepage_Mail_Animation_1336x1358_101025_optimized.mp4"
+                          src="/assets/videos/mail_animation.mp4"
                           type="video/mp4"
                         />
                         Sorry, your browser doesn&#x27;t support embedded
@@ -374,12 +374,12 @@ export default function SuiteSection() {
                         loop
                         muted
                         playsInline
-                        poster="/assets/images.ctfassets.net/vwfkeyj6n9ac/4Xbsd7oCDAyYCJROHZ80Oo/e8f5b1d2fab4760b806f6413cd256f89/grammarly-fallback.png"
+                        poster="/assets/images/grammarly-fallback.png"
                         width="1358"
                         height="1336"
                       >
                         <source
-                          src="/assets/superhumanstatic.com/super-funnel/main/public/homepage/Homepage_Grammarly_Animation_1336x1358_101025_optimized.mp4"
+                          src="/assets/videos/grammarly-animation.mp4"
                           type="video/mp4"
                         />
                         Sorry, your browser doesn&#x27;t support embedded
@@ -487,12 +487,12 @@ export default function SuiteSection() {
                         loop
                         muted
                         playsInline
-                        poster="/assets/images.ctfassets.net/vwfkeyj6n9ac/aX0n8e13NwFiOnXVCAG8u/eed3b77003f84aa38d0bb4eaf5becc6f/coda-fallback.png"
+                        poster="/assets/images/coda-fallback.png"
                         width="1358"
                         height="1336"
                       >
                         <source
-                          src="/assets/superhumanstatic.com/super-funnel/main/public/homepage/Homepage_Coda_Animation_1336x1358_101025_optimized.mp4"
+                          src="/assets/videos/coda-animation.mp4"
                           type="video/mp4"
                         />
                         Sorry, your browser doesn&#x27;t support embedded
@@ -600,12 +600,12 @@ export default function SuiteSection() {
                         loop
                         muted
                         playsInline
-                        poster="/assets/images.ctfassets.net/vwfkeyj6n9ac/2Elaw7EDLXcTtRhFmYlD3c/048b30c77421faf80ce7556320cd98c6/go-fallback.png"
+                        poster="/assets/images/go-fallback.png"
                         width="1358"
                         height="1334"
                       >
                         <source
-                          src="/assets/superhumanstatic.com/super-funnel/main/public/homepage/Homepage_Go_Animation_1336x1358_102325_optimized.mp4"
+                          src="/assets/videos/go-animation.mp4"
                           type="video/mp4"
                         />
                         Sorry, your browser doesn&#x27;t support embedded

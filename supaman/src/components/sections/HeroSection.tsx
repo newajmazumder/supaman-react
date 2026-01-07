@@ -12,7 +12,7 @@ export default function HeroSection() {
                 <img
                   alt="OpenAI"
                   className="image_contain__NKbgm"
-                  src="/assets/superhumanstatic.com/super-funnel/main/public/images/v1/trusted-by-logos/trustedby-logo-openai.svg"
+                  src="/assets/images/trustedby-logo-openai.svg"
                   width="228"
                   height="80"
                   loading="lazy"
@@ -26,7 +26,7 @@ export default function HeroSection() {
                 <img
                   alt="Figma"
                   className="image_contain__NKbgm"
-                  src="/assets/superhumanstatic.com/super-funnel/main/public/images/v1/trusted-by-logos/trustedby-logo-figma.svg"
+                  src="/assets/images/trustedby-logo-figma.svg"
                   width="228"
                   height="80"
                   loading="lazy"
@@ -40,7 +40,7 @@ export default function HeroSection() {
                 <img
                   alt="HubSpot"
                   className="image_contain__NKbgm"
-                  src="/assets/superhumanstatic.com/super-funnel/main/public/images/v1/trusted-by-logos/trustedby-logo-hubspot.svg"
+                  src="/assets/images/trustedby-logo-hubspot.svg"
                   width="228"
                   height="80"
                   loading="lazy"
@@ -54,7 +54,7 @@ export default function HeroSection() {
                 <img
                   alt="Doordash"
                   className="image_contain__NKbgm"
-                  src="/assets/superhumanstatic.com/super-funnel/main/public/images/v1/trusted-by-logos/trustedby-logo-doordash.svg"
+                  src="/assets/images/trustedby-logo-doordash.svg"
                   width="228"
                   height="80"
                   loading="lazy"
@@ -68,7 +68,7 @@ export default function HeroSection() {
                 <img
                   alt="Expensify"
                   className="image_contain__NKbgm"
-                  src="/assets/superhumanstatic.com/super-funnel/main/public/images/v1/trusted-by-logos/trustedby-logo-expensify.svg"
+                  src="/assets/images/trustedby-logo-expensify.svg"
                   width="228"
                   height="80"
                   loading="lazy"
@@ -82,7 +82,7 @@ export default function HeroSection() {
                 <img
                   alt="Eventbrite"
                   className="image_contain__NKbgm"
-                  src="/assets/superhumanstatic.com/super-funnel/main/public/images/v1/trusted-by-logos/trustedby-logo-eventbrite.svg"
+                  src="/assets/images/trustedby-logo-eventbrite.svg"
                   width="228"
                   height="80"
                   loading="lazy"
