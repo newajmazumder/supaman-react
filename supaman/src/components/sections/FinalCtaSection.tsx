@@ -47,9 +47,7 @@ export default function FinalCtaSection() {
             href="https://superhuman.com/auth/signup?screen_hint=signup"
           >
             <span className="button_buttonContent__3qg6Y">
-              <span className="text_text__RO8_0 button_text__zGLt3">
-                Get Superhuman
-              </span>
+              <span className="text_text__RO8_0 button_text__zGLt3">Get Superhuman</span>
             </span>
           </a>
         </div>

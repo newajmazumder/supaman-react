@@ -75,9 +75,9 @@ export default function BannerSection() {
                     </svg>
                     <div className="display-column gap-2x">
                       <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B chat_message__oorK8">
-                        Looks like you&#x27;re chatting with Antonio and Laura
-                        in the <span>#launch-project-chat</span> and need to
-                        book a meeting. Would you like me to find a good time?
+                        Looks like you&#x27;re chatting with Antonio and Laura in the{" "}
+                        <span>#launch-project-chat</span> and need to book a meeting. Would you like
+                        me to find a good time?
                       </span>
                       <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B chat_message__oorK8 chat_userMessage__aAHO7">
                         yes!
@@ -229,40 +229,32 @@ export default function BannerSection() {
                     </span>
                   </div>
                   <div className="display-row align-items-center gap-1x">
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
-                      Calendar
-                    </span>
+                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Calendar</span>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
                       13
                     </span>
                   </div>
                   <div className="display-row align-items-center gap-1x">
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
-                      Docs
-                    </span>
+                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Docs</span>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
                       8
                     </span>
                   </div>
                   <div className="display-row align-items-center gap-1x">
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
-                      Other
-                    </span>
+                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Other</span>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
                       19
                     </span>
                   </div>
                   <div className="mail_message__d496T mail_selectedMessage__Xicr3"></div>
-                  <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
-                    Sarah Kim
-                  </span>
+                  <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Sarah Kim</span>
                   <div className="display-row align-items-center gap-2x mail_messageContent__655WM">
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
                       Design Review moved to Thursday
                     </span>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
-                      Hey team, quick heads-up — we&#x27;re pushing the design
-                      review to Thursday at 2pm.
+                      Hey team, quick heads-up — we&#x27;re pushing the design review to Thursday at
+                      2pm.
                     </span>
                   </div>
                   <div className="mail_message__d496T"></div>
@@ -274,34 +266,29 @@ export default function BannerSection() {
                       Feedback on your client presentation
                     </span>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
-                      Great work on the slides. I added a couple of notes around
-                      clarity and flow.
+                      Great work on the slides. I added a couple of notes around clarity and flow.
                     </span>
                   </div>
                   <div className="mail_message__d496T"></div>
-                  <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
-                    Laura Chen
-                  </span>
+                  <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Laura Chen</span>
                   <div className="display-row align-items-center gap-2x mail_messageContent__655WM">
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
                       Coffee next week?
                     </span>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
-                      It&#x27;s been a while since we caught up — are you free
-                      for a quick coffee next week?
+                      It&#x27;s been a while since we caught up — are you free for a quick coffee
+                      next week?
                     </span>
                   </div>
                   <div className="mail_message__d496T"></div>
-                  <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
-                    HR Team
-                  </span>
+                  <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">HR Team</span>
                   <div className="display-row align-items-center gap-2x mail_messageContent__655WM">
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
                       Reminder: Open enrollment closes Friday
                     </span>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
-                      Don&#x27;t forget to update your benefits selections
-                      before the deadline this week.
+                      Don&#x27;t forget to update your benefits selections before the deadline this
+                      week.
                     </span>
                   </div>
                   <div className="mail_message__d496T"></div>
@@ -313,8 +300,7 @@ export default function BannerSection() {
                       Sprint planning agenda attached
                     </span>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
-                      Please review the agenda ahead of Monday’s sprint planning
-                      meeting.
+                      Please review the agenda ahead of Monday’s sprint planning meeting.
                     </span>
                   </div>
                 </div>
@@ -323,11 +309,7 @@ export default function BannerSection() {
                   style={{ Index: "7" }}
                 >
                   <div className="display-row align-items-center gap-2x flex-wrap">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="17"
-                      height="17"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
                       <use href="#sparkle-icon"></use>
                     </svg>
                     <p className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
@@ -343,11 +325,7 @@ export default function BannerSection() {
                 style={{ Index: "3" }}
               >
                 <div className="display-row align-items-center gap-2x">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="19"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19">
                     <use href="#reader-reactions-icon"></use>
                   </svg>
                   <p className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
@@ -361,11 +339,7 @@ export default function BannerSection() {
               >
                 <div className="display-column gap-4x">
                   <div className="display-row align-items-center gap-2x">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                       <use href="#home-icon"></use>
                     </svg>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B editor_toolbarText___BldC">
@@ -374,18 +348,10 @@ export default function BannerSection() {
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B editor_toolbarText___BldC editor_toolbarTextEnd__it_0A">
                       Share
                     </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="15"
-                      height="13"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
                       <use href="#comment-icon"></use>
                     </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="14"
-                      height="14"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
                       <use href="#gear-icon"></use>
                     </svg>
                   </div>
@@ -394,24 +360,18 @@ export default function BannerSection() {
                       Streamlining Team Documentation
                     </span>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B editor_editorText__ZoEil">
-                      I&#x27;ve been thinking about how our team can streamline
-                      the onboarding process for <u>new-hires</u>.{" "}
+                      I&#x27;ve been thinking about how our team can streamline the onboarding
+                      process for <u>new-hires</u>.{" "}
                       <span>
-                        Right now, documentation is scattered across different
-                        tools, which makes it hard to find answers quickly. If
-                        we consolidate into a single hub and add
+                        Right now, documentation is scattered across different tools, which makes it
+                        hard to find answers quickly. If we consolidate into a single hub and add
                       </span>{" "}
-                      more real-world examples, I think it&#x27;ll cut down on{" "}
-                      <u>repetative</u> questions and help people ramp up
-                      faster.
+                      more real-world examples, I think it&#x27;ll cut down on <u>repetative</u>{" "}
+                      questions and help people ramp up faster.
                     </span>
                     <div className="display-row align-items-center editor_toolbar__jLb_Y">
                       <div className="display-row align-items-center gap-0.5x editor_toolbarItem__roylq">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="16"
-                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
                           <use href="#font-icon"></use>
                         </svg>
                         <svg
@@ -424,47 +384,27 @@ export default function BannerSection() {
                         </svg>
                       </div>
                       <div className="display-row align-items-center gap-0.5x editor_toolbarItem__roylq">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="16"
-                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
                           <use href="#bold-icon"></use>
                         </svg>
                       </div>
                       <div className="display-row align-items-center gap-0.5x editor_toolbarItem__roylq">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                           <use href="#italic-icon"></use>
                         </svg>
                       </div>
                       <div className="display-row align-items-center gap-0.5x editor_toolbarItem__roylq">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="16"
-                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
                           <use href="#underline-icon"></use>
                         </svg>
                       </div>
                       <div className="display-row align-items-center gap-0.5x editor_toolbarItem__roylq">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="15"
-                          height="16"
-                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
                           <use href="#strikethrough-icon"></use>
                         </svg>
                       </div>
                       <div className="display-row align-items-center gap-0.5x editor_toolbarItem__roylq">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                           <use href="#align-start-icon"></use>
                         </svg>
                         <svg
@@ -485,11 +425,7 @@ export default function BannerSection() {
                 style={{ Index: "5" }}
               >
                 <div className="display-row align-items-center gap-2x">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="19"
-                    height="18"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18">
                     <use href="#grammarly-logo-icon"></use>
                   </svg>
                   <p className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
@@ -502,11 +438,7 @@ export default function BannerSection() {
                 style={{ Index: "6" }}
               >
                 <div className="display-row align-items-center gap-2x flex-wrap">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="17"
-                    height="17"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
                     <use href="#sparkle-icon"></use>
                   </svg>
                   <p className="text_text__RO8_0 homepage-text_heroCard__NMA8B">

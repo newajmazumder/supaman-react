@@ -25,7 +25,7 @@
     avenir,
     helvetica neue,
     helvetica,
-    'sans-serif';
+    "sans-serif";
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px) saturate(5);
   -webkit-backdrop-filter: blur(20px) saturate(5);
@@ -231,7 +231,7 @@ a:focus {
   opacity: 0;
   transform-origin: bottom center;
   transform: rotate(45deg) scale(0);
-  content: '';
+  content: "";
   position: absolute;
   left: 1px;
   top: 0;
@@ -452,7 +452,7 @@ a:focus {
     avenir,
     helvetica neue,
     helvetica,
-    'sans-serif';
+    "sans-serif";
   box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px) saturate(5);
   transition:
@@ -687,7 +687,7 @@ a:focus {
 
 /** Button for switch */
 .switch.switch-background .switch.switch-button {
-  content: '';
+  content: "";
   position: absolute;
   top: var(--switchGutter);
   left: var(--switchGutter);

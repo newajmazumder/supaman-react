@@ -43,18 +43,12 @@ export default function GlobalHeader() {
                 </a>
               </li>
               <li className="">
-                <a
-                  className="link_link__AAIEV nav-links_navLink__2KNGH"
-                  href="/plans"
-                >
+                <a className="link_link__AAIEV nav-links_navLink__2KNGH" href="/plans">
                   Pricing
                 </a>
               </li>
               <li className="">
-                <a
-                  className="link_link__AAIEV nav-links_navLink__2KNGH"
-                  href="/contact"
-                >
+                <a className="link_link__AAIEV nav-links_navLink__2KNGH" href="/contact">
                   Contact us
                 </a>
               </li>
@@ -69,9 +63,7 @@ export default function GlobalHeader() {
                 href="https://superhuman.com/auth/signin"
               >
                 <span className="button_buttonContent__3qg6Y">
-                  <span className="text_text__RO8_0 button_text__zGLt3">
-                    Log in
-                  </span>
+                  <span className="text_text__RO8_0 button_text__zGLt3">Log in</span>
                 </span>
               </a>
               <a
@@ -80,9 +72,7 @@ export default function GlobalHeader() {
                 href="https://superhuman.com/auth/signup?screen_hint=signup"
               >
                 <span className="button_buttonContent__3qg6Y">
-                  <span className="text_text__RO8_0 button_text__zGLt3">
-                    Sign up
-                  </span>
+                  <span className="text_text__RO8_0 button_text__zGLt3">Sign up</span>
                 </span>
               </a>
             </div>
@@ -205,18 +195,12 @@ export default function GlobalHeader() {
                         </a>
                       </li>
                       <li className="nav-links_navListItem__SJ80V">
-                        <a
-                          className="link_link__AAIEV nav-links_navLink__2KNGH"
-                          href="/plans"
-                        >
+                        <a className="link_link__AAIEV nav-links_navLink__2KNGH" href="/plans">
                           Pricing
                         </a>
                       </li>
                       <li className="nav-links_navListItem__SJ80V">
-                        <a
-                          className="link_link__AAIEV nav-links_navLink__2KNGH"
-                          href="/contact"
-                        >
+                        <a className="link_link__AAIEV nav-links_navLink__2KNGH" href="/contact">
                           Contact us
                         </a>
                       </li>
@@ -231,9 +215,7 @@ export default function GlobalHeader() {
                     href="https://superhuman.com/auth/signin"
                   >
                     <span className="button_buttonContent__3qg6Y">
-                      <span className="text_text__RO8_0 button_text__zGLt3">
-                        Log in
-                      </span>
+                      <span className="text_text__RO8_0 button_text__zGLt3">Log in</span>
                     </span>
                   </a>
                   <a
@@ -242,9 +224,7 @@ export default function GlobalHeader() {
                     href="https://superhuman.com/auth/signup?screen_hint=signup"
                   >
                     <span className="button_buttonContent__3qg6Y">
-                      <span className="text_text__RO8_0 button_text__zGLt3">
-                        Sign up
-                      </span>
+                      <span className="text_text__RO8_0 button_text__zGLt3">Sign up</span>
                     </span>
                   </a>
                 </footer>

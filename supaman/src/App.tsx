@@ -1,7 +1,5 @@
 import { useEffect } from "react";
-import SuperhumanHead, {
-  type SuperhumanHeadData,
-} from "./components/SuperhumanHead";
+import SuperhumanHead, { type SuperhumanHeadData } from "./components/SuperhumanHead";
 import BannerSection from "./components/sections/BannerSection";
 import FinalCtaSection from "./components/sections/FinalCtaSection";
 import GlobalFooter from "./components/sections/GlobalFooter";
@@ -21,8 +19,7 @@ const headData: SuperhumanHeadData = {
   ogDescription:
     "Superhuman is the AI productivity suite that gives you superpowers everywhere you work. So you can be more creative, strategic, and impactful.",
   ogUrl: "https://superhuman.com/",
-  ogImage:
-    "/assets/images/social-share.png",
+  ogImage: "/assets/images/social-share.png",
   twitterSite: "@Superhuman",
   // Scraped Superhuman styles that drive header/hero appearance.
   cssLinks: [
@@ -61,12 +58,8 @@ const headData: SuperhumanHeadData = {
 
 export default function App() {
   useEffect(() => {
-    const header = document.querySelector<HTMLElement>(
-      '[data-global-header="true"]'
-    );
-    const heroSection = document.querySelector<HTMLElement>(
-      ".page_heroSection__WbWUz"
-    );
+    const header = document.querySelector<HTMLElement>('[data-global-header="true"]');
+    const heroSection = document.querySelector<HTMLElement>(".page_heroSection__WbWUz");
 
     if (!header || !heroSection) {
       return;
@@ -85,10 +78,7 @@ export default function App() {
         "--header-has-blur",
         progress === 0 || progress >= 0.99 ? "initial" : "/* empty string */"
       );
-      header.style.setProperty(
-        "color-scheme",
-        progress >= 0.6 ? "light" : "dark"
-      );
+      header.style.setProperty("color-scheme", progress >= 0.6 ? "light" : "dark");
     };
 
     const onScroll = () => {

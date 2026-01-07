@@ -4,12 +4,7 @@ export default function GlobalFooter() {
       <footer className="footer_footer__yLXSJ" data-color-scheme="dark">
         <div className="content-wrapper_contentWrapper__9WGiY footer_footerContent__v55Eh">
           <div className="display-column gap-6x footer_logo__qUT96">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="25"
-              width="168"
-              fill="currentColor"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" height="25" width="168" fill="currentColor">
               <use href="#superhuman-logo"></use>
             </svg>
             <h3 className="text_text__RO8_0 footer_logoTitle__NAoRK">
@@ -93,11 +88,7 @@ export default function GlobalFooter() {
                     className="link_link__AAIEV nav-links_navLink__2KNGH footer_navLink__24Djd"
                   >
                     Careers
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="11"
-                      height="11"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11">
                       <use href="#open-new-icon"></use>
                     </svg>
                   </a>
@@ -131,11 +122,7 @@ export default function GlobalFooter() {
                     className="link_link__AAIEV nav-links_navLink__2KNGH footer_navLink__24Djd"
                   >
                     Privacy Policy
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="11"
-                      height="11"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11">
                       <use href="#open-new-icon"></use>
                     </svg>
                   </a>
@@ -276,9 +263,7 @@ export default function GlobalFooter() {
               </ul>
             </div>
           </nav>
-          <p className="footer_trademark__3ELu9">
-            Builders of Superhuman Platform® apps
-          </p>
+          <p className="footer_trademark__3ELu9">Builders of Superhuman Platform® apps</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             role="none"

@@ -26,22 +26,9 @@ export default function SvgDefs() {
               d="M.887 6h14.226M10.371 1.258 15.113 6l-4.742 4.742"
             ></path>
           </symbol>
-          <symbol
-            id="open-new-icon"
-            viewBox="0 0 11 11"
-            fill="none"
-            stroke="currentColor"
-          >
-            <path
-              d="M8.50002 7.50002V2.5H3.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></path>
-            <path
-              d="M8.50003 2.49997L2.5 8.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></path>
+          <symbol id="open-new-icon" viewBox="0 0 11 11" fill="none" stroke="currentColor">
+            <path d="M8.50002 7.50002V2.5H3.5" strokeLinecap="round" strokeLinejoin="round"></path>
+            <path d="M8.50003 2.49997L2.5 8.5" strokeLinecap="round" strokeLinejoin="round"></path>
           </symbol>
           <symbol id="menu-icon" viewBox="0 0 42 42" stroke="currentColor">
             <path
@@ -58,11 +45,7 @@ export default function SvgDefs() {
             ></path>
           </symbol>
           <symbol id="thin-arrow-down-icon" viewBox="0 0 12 7" fill="none">
-            <path
-              d="M0.5 0.5L6 6L11.5 0.5"
-              stroke="currentColor"
-              strokeLinecap="round"
-            ></path>
+            <path d="M0.5 0.5L6 6L11.5 0.5" stroke="currentColor" strokeLinecap="round"></path>
           </symbol>
           <symbol id="arrow-right-icon" viewBox="0 0 20 18" fill="none">
             <path
@@ -94,11 +77,7 @@ export default function SvgDefs() {
             <path d="M62.2891 6.59827H68.0773C68.9251 6.59827 69.6697 6.75583 70.3115 7.07081C70.953 7.38611 71.4514 7.83857 71.8066 8.42852C72.1617 9.01872 72.3394 9.71476 72.3394 10.5166C72.3394 11.3184 72.1613 11.9217 71.8063 12.5117C71.4511 13.1019 70.8073 13.5948 70.1437 13.8722C69.426 14.1723 63.7283 15.894 63.7283 15.894L63.7327 13.1291C63.7327 13.1291 67.9201 12.0898 68.6019 11.8377C68.8998 11.7275 69.6539 11.4768 69.6539 10.5166C69.6539 9.36899 68.5166 9.26198 67.7991 9.26198H64.2771L65.0505 8.48859V18.6282H62.2891V6.59827Z"></path>
             <path d="M23.7856 7.0297C23.5221 3.71948 20.8893 1.09305 17.5812 0.836111C13.8616 0.548683 10.1266 0.550849 6.407 0.846957C3.09678 1.10835 0.470368 3.74129 0.213428 7.05151C-0.0739998 10.7711 -0.071834 14.506 0.224291 18.2256C0.487845 21.5358 3.12079 24.1622 6.42885 24.4192C10.1485 24.7067 13.8833 24.7046 17.6029 24.4083C20.9131 24.1448 23.5396 21.5118 23.7965 18.2039C24.0841 14.4843 24.0819 10.7493 23.7856 7.0297ZM12.0343 4.44908C13.3736 4.44908 14.4581 5.53143 14.4581 6.8664C14.4581 8.20136 13.3736 9.28371 12.0343 9.28371C10.695 9.28371 9.61049 8.20136 9.61049 6.8664C9.61049 5.53143 10.695 4.44908 12.0343 4.44908ZM16.6077 20.3751H16.6098L12.4024 18.0711C12.1736 17.9448 11.8949 17.9448 11.6663 18.0711L7.45877 20.3751C6.78147 20.7454 6.0433 19.994 6.43306 19.3319L11.3766 10.9563C11.6706 10.4576 12.3959 10.4576 12.6898 10.9563L17.6334 19.3319C18.0231 19.994 17.2872 20.7454 16.6077 20.3751Z"></path>
           </symbol>
-          <symbol
-            id="superhuman-mail-with-background-icon"
-            viewBox="0 0 23 23"
-            fill="none"
-          >
+          <symbol id="superhuman-mail-with-background-icon" viewBox="0 0 23 23" fill="none">
             <rect width="23" height="23" fill="#9e6ee5" rx="3.833"></rect>
             <path
               fill="#fff"
@@ -158,12 +137,7 @@ export default function SvgDefs() {
             </g>
             <defs>
               <clipPath id="clip0_3256_112416">
-                <rect
-                  width="20"
-                  height="20"
-                  fill="white"
-                  transform="translate(2.5 2)"
-                ></rect>
+                <rect width="20" height="20" fill="white" transform="translate(2.5 2)"></rect>
               </clipPath>
             </defs>
           </symbol>
@@ -518,10 +492,7 @@ export default function SvgDefs() {
                 width="20"
                 height="20"
               >
-                <path
-                  d="M-2.80029 -2.80001H16.7996V16.7999H-2.80029V-2.80001Z"
-                  fill="white"
-                ></path>
+                <path d="M-2.80029 -2.80001H16.7996V16.7999H-2.80029V-2.80001Z" fill="white"></path>
               </mask>
               <g mask="url(#mask0_41784_533)">
                 <path

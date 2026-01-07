@@ -45,10 +45,7 @@ export default function SuiteSection() {
   };
   return (
     <>
-      <section
-        className="section_section___xslj"
-        style={{ backgroundColor: "var(--neutral-10)" }}
-      >
+      <section className="section_section___xslj" style={{ backgroundColor: "var(--neutral-10)" }}>
         <div className="content-wrapper_contentWrapper__9WGiY tabbed-section_container__4xQi7">
           <header className="tabbed-section-header_header__yi_x6">
             <div className="tabbed-section-header_headerContent__xcILj">
@@ -60,15 +57,10 @@ export default function SuiteSection() {
                 aria-disabled="false"
                 href="https://superhuman.com/plans"
               >
-                <span className="button_buttonContent__3qg6Y">
-                  Get the suite
-                </span>
+                <span className="button_buttonContent__3qg6Y">Get the suite</span>
               </a>
             </div>
-            <div
-              className="grid_grid__zNBn_ tabbed-section-header_nav__nxFkt"
-              role="tablist"
-            >
+            <div className="grid_grid__zNBn_ tabbed-section-header_nav__nxFkt" role="tablist">
               <button
                 className={`button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ${
                   activeId === "tabbed-section-superhuman-mail"
@@ -81,11 +73,7 @@ export default function SuiteSection() {
                 onClick={() => handleNavClick("tabbed-section-superhuman-mail")}
               >
                 <span className="button_buttonContent__3qg6Y">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="23"
-                    height="23"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23">
                     <use href="#superhuman-mail-with-background-icon"></use>
                   </svg>
                   <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-header_navItemText__4eGgN">
@@ -105,11 +93,7 @@ export default function SuiteSection() {
                 onClick={() => handleNavClick("tabbed-section-grammarly")}
               >
                 <span className="button_buttonContent__3qg6Y">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
                     <use href="#grammarly-bubble-icon"></use>
                   </svg>
                   <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-header_navItemText__4eGgN">
@@ -119,9 +103,7 @@ export default function SuiteSection() {
               </button>
               <button
                 className={`button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ${
-                  activeId === "tabbed-section-coda"
-                    ? " tabbed-section-header_active__JAG7a"
-                    : ""
+                  activeId === "tabbed-section-coda" ? " tabbed-section-header_active__JAG7a" : ""
                 }`}
                 role="tab"
                 aria-selected={activeId === "tabbed-section-coda"}
@@ -129,11 +111,7 @@ export default function SuiteSection() {
                 onClick={() => handleNavClick("tabbed-section-coda")}
               >
                 <span className="button_buttonContent__3qg6Y">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="19"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19">
                     <use href="#coda-logo-icon"></use>
                   </svg>
                   <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-header_navItemText__4eGgN">
@@ -143,9 +121,7 @@ export default function SuiteSection() {
               </button>
               <button
                 className={`button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ${
-                  activeId === "tabbed-section-go"
-                    ? " tabbed-section-header_active__JAG7a"
-                    : ""
+                  activeId === "tabbed-section-go" ? " tabbed-section-header_active__JAG7a" : ""
                 }`}
                 role="tab"
                 aria-selected={activeId === "tabbed-section-go"}
@@ -153,11 +129,7 @@ export default function SuiteSection() {
                 onClick={() => handleNavClick("tabbed-section-go")}
               >
                 <span className="button_buttonContent__3qg6Y">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="17"
-                    height="23"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="23">
                     <use href="#go-logo-icon"></use>
                   </svg>
                   <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-header_navItemText__4eGgN">
@@ -181,11 +153,7 @@ export default function SuiteSection() {
                   style={{ ColumnGridSpan: "6" }}
                 >
                   <div className="tabbed-section-content_titleWrapper__GIhEl">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="23"
-                      height="23"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23">
                       <use href="#superhuman-mail-with-background-icon"></use>
                     </svg>
                     <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-content_title__4UbyC">
@@ -200,8 +168,8 @@ export default function SuiteSection() {
                     </div>
                     <div className="tabbed-section-content_copyWrapper__AP_f2">
                       <p className="text_text__RO8_0 text_bodyMedium__dDqhi">
-                        Fly through your inbox twice as fast as before, never
-                        drop the ball again, and save 4 hours every single week.
+                        Fly through your inbox twice as fast as before, never drop the ball again,
+                        and save 4 hours every single week.
                       </p>
                     </div>
                     <div className="tabbed-section-content_linkWrapper__QOgMX">
@@ -219,12 +187,7 @@ export default function SuiteSection() {
                           fill="none"
                           viewBox="0 0 20 14.17"
                         >
-                          <circle
-                            cx="1"
-                            cy="7.5"
-                            r="1"
-                            fill="currentColor"
-                          ></circle>
+                          <circle cx="1" cy="7.5" r="1" fill="currentColor"></circle>
                           <path
                             stroke="currentColor"
                             strokeLinecap="round"
@@ -267,12 +230,8 @@ export default function SuiteSection() {
                         width="1358"
                         height="1336"
                       >
-                        <source
-                          src="/assets/videos/mail_animation.mp4"
-                          type="video/mp4"
-                        />
-                        Sorry, your browser doesn&#x27;t support embedded
-                        videos.
+                        <source src="/assets/videos/mail_animation.mp4" type="video/mp4" />
+                        Sorry, your browser doesn&#x27;t support embedded videos.
                       </video>
                     </div>
                   </div>
@@ -292,11 +251,7 @@ export default function SuiteSection() {
                   style={{ ColumnGridSpan: "6" }}
                 >
                   <div className="tabbed-section-content_titleWrapper__GIhEl">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="22"
-                      height="22"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
                       <use href="#grammarly-bubble-icon"></use>
                     </svg>
                     <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-content_title__4UbyC">
@@ -311,8 +266,8 @@ export default function SuiteSection() {
                     </div>
                     <div className="tabbed-section-content_copyWrapper__AP_f2">
                       <p className="text_text__RO8_0 text_bodyMedium__dDqhi">
-                        Turn your thoughts into writing that’s clear, credible,
-                        and impossible to ignore.
+                        Turn your thoughts into writing that’s clear, credible, and impossible to
+                        ignore.
                       </p>
                     </div>
                     <div className="tabbed-section-content_linkWrapper__QOgMX">
@@ -330,12 +285,7 @@ export default function SuiteSection() {
                           fill="none"
                           viewBox="0 0 20 14.17"
                         >
-                          <circle
-                            cx="1"
-                            cy="7.5"
-                            r="1"
-                            fill="currentColor"
-                          ></circle>
+                          <circle cx="1" cy="7.5" r="1" fill="currentColor"></circle>
                           <path
                             stroke="currentColor"
                             strokeLinecap="round"
@@ -378,12 +328,8 @@ export default function SuiteSection() {
                         width="1358"
                         height="1336"
                       >
-                        <source
-                          src="/assets/videos/grammarly-animation.mp4"
-                          type="video/mp4"
-                        />
-                        Sorry, your browser doesn&#x27;t support embedded
-                        videos.
+                        <source src="/assets/videos/grammarly-animation.mp4" type="video/mp4" />
+                        Sorry, your browser doesn&#x27;t support embedded videos.
                       </video>
                     </div>
                   </div>
@@ -403,11 +349,7 @@ export default function SuiteSection() {
                   style={{ ColumnGridSpan: "6" }}
                 >
                   <div className="tabbed-section-content_titleWrapper__GIhEl">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="18"
-                      height="19"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19">
                       <use href="#coda-logo-icon"></use>
                     </svg>
                     <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-content_title__4UbyC">
@@ -422,8 +364,8 @@ export default function SuiteSection() {
                     </div>
                     <div className="tabbed-section-content_copyWrapper__AP_f2">
                       <p className="text_text__RO8_0 text_bodyMedium__dDqhi">
-                        Build everything from wikis, through project plans, to
-                        goal trackers — keeping everyone perfectly in sync.
+                        Build everything from wikis, through project plans, to goal trackers —
+                        keeping everyone perfectly in sync.
                       </p>
                     </div>
                     <div className="tabbed-section-content_linkWrapper__QOgMX">
@@ -441,12 +383,7 @@ export default function SuiteSection() {
                           fill="none"
                           viewBox="0 0 20 14.17"
                         >
-                          <circle
-                            cx="1"
-                            cy="7.5"
-                            r="1"
-                            fill="currentColor"
-                          ></circle>
+                          <circle cx="1" cy="7.5" r="1" fill="currentColor"></circle>
                           <path
                             stroke="currentColor"
                             strokeLinecap="round"
@@ -462,12 +399,10 @@ export default function SuiteSection() {
                         Connect Slack, Jira, Salesforce, and 800+ tools
                       </li>
                       <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
-                        Build your team wiki, project plans, and company goal
-                        trackers
+                        Build your team wiki, project plans, and company goal trackers
                       </li>
                       <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
-                        Create a single source of truth for all your team’s
-                        knowledge
+                        Create a single source of truth for all your team’s knowledge
                       </li>
                       <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
                         Save time on manual tasks with Coda AI
@@ -491,12 +426,8 @@ export default function SuiteSection() {
                         width="1358"
                         height="1336"
                       >
-                        <source
-                          src="/assets/videos/coda-animation.mp4"
-                          type="video/mp4"
-                        />
-                        Sorry, your browser doesn&#x27;t support embedded
-                        videos.
+                        <source src="/assets/videos/coda-animation.mp4" type="video/mp4" />
+                        Sorry, your browser doesn&#x27;t support embedded videos.
                       </video>
                     </div>
                   </div>
@@ -516,11 +447,7 @@ export default function SuiteSection() {
                   style={{ ColumnGridSpan: "6" }}
                 >
                   <div className="tabbed-section-content_titleWrapper__GIhEl">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="17"
-                      height="23"
-                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="23">
                       <use href="#go-logo-icon"></use>
                     </svg>
                     <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-content_title__4UbyC">
@@ -535,8 +462,8 @@ export default function SuiteSection() {
                     </div>
                     <div className="tabbed-section-content_copyWrapper__AP_f2">
                       <p className="text_text__RO8_0 text_bodyMedium__dDqhi">
-                        Go is the proactive AI assistant that knows what you
-                        know and offers help without you having to ask.
+                        Go is the proactive AI assistant that knows what you know and offers help
+                        without you having to ask.
                       </p>
                     </div>
                     <div className="tabbed-section-content_linkWrapper__QOgMX">
@@ -554,12 +481,7 @@ export default function SuiteSection() {
                           fill="none"
                           viewBox="0 0 20 14.17"
                         >
-                          <circle
-                            cx="1"
-                            cy="7.5"
-                            r="1"
-                            fill="currentColor"
-                          ></circle>
+                          <circle cx="1" cy="7.5" r="1" fill="currentColor"></circle>
                           <path
                             stroke="currentColor"
                             strokeLinecap="round"
@@ -572,12 +494,10 @@ export default function SuiteSection() {
                     </div>
                     <ul className="">
                       <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
-                        Connect Gmail, Drive, Jira, and all of your favorite
-                        apps
+                        Connect Gmail, Drive, Jira, and all of your favorite apps
                       </li>
                       <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
-                        Say the right thing with the right info, everywhere you
-                        write
+                        Say the right thing with the right info, everywhere you write
                       </li>
                       <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
                         Schedule meetings without leaving the conversation
@@ -604,12 +524,8 @@ export default function SuiteSection() {
                         width="1358"
                         height="1334"
                       >
-                        <source
-                          src="/assets/videos/go-animation.mp4"
-                          type="video/mp4"
-                        />
-                        Sorry, your browser doesn&#x27;t support embedded
-                        videos.
+                        <source src="/assets/videos/go-animation.mp4" type="video/mp4" />
+                        Sorry, your browser doesn&#x27;t support embedded videos.
                       </video>
                     </div>
                   </div>

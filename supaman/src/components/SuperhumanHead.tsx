@@ -37,11 +37,7 @@ export default function SuperhumanHead({ data }: SuperhumanHeadProps) {
       head.appendChild(el);
     };
 
-    const setMeta = (
-      attr: "name" | "property",
-      key: string,
-      content?: string
-    ) => {
+    const setMeta = (attr: "name" | "property", key: string, content?: string) => {
       if (!content) {
         return;
       }

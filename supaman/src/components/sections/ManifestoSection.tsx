@@ -13,11 +13,9 @@ export default function ManifestoSection() {
                 Becoming Superhuman.
               </h2>
               <p className="text_text__RO8_0 homepage-text_copy__AN1p_ manifesto-section_copy___YICx">
-                When AI works everywhere you work, it starts to change{" "}
-                <em>how</em> you work. At first, you think faster and more
-                deeply. Before you know it, you have the time to be more
-                creative, strategic, and impactful—free to do what only you can
-                do.
+                When AI works everywhere you work, it starts to change <em>how</em> you work. At
+                first, you think faster and more deeply. Before you know it, you have the time to be
+                more creative, strategic, and impactful—free to do what only you can do.
               </p>
               <a
                 className="link_link__AAIEV button_button__RzPSK button_secondaryHeart__asuq7"
@@ -25,9 +23,7 @@ export default function ManifestoSection() {
                 href="https://blog.superhuman.com/introducing-new-superhuman/"
               >
                 <span className="button_buttonContent__3qg6Y">
-                  <span className="text_text__RO8_0 button_text__zGLt3">
-                    Read our announcement
-                  </span>
+                  <span className="text_text__RO8_0 button_text__zGLt3">Read our announcement</span>
                 </span>
               </a>
             </div>
