@@ -6,13 +6,8 @@ export default function BannerSection() {
   return (
     <>
       {/* Hero section content layer (text + visuals). */}
-      <section
-        className={`section_section___xslj ${sectionStyles.section}`}
-        data-color-scheme="dark"
-      >
-        <div
-          className={`content-wrapper_contentWrapper__9WGiY ${bannerStyles.contentWrapper} page_heroSection__WbWUz ${bannerStyles.hero}`}
-        >
+      <section className={sectionStyles.section} data-color-scheme="dark">
+        <div className={`${bannerStyles.contentWrapper} page_heroSection__WbWUz ${bannerStyles.hero}`}>
           <div
             className={bannerStyles.titleGroup}
           >

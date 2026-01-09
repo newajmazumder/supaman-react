@@ -5,6 +5,27 @@
   timeline-scope: --homepage-hero-section;
 }
 
+.contentWrapper {
+  --mobile-padding-inline: var(--space-4x);
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-4x);
+  container-type: inline-size;
+  box-sizing: content-box;
+}
+
+@media (min-width: 641px) {
+  .contentWrapper {
+    padding-inline: var(--space-6x);
+  }
+}
+
+@media (min-width: 1281px) {
+  .contentWrapper {
+    padding-inline: var(--space-9x);
+  }
+}
+
 @property --header-opacity {
   syntax: "<percentage>";
   inherits: true;
@@ -48,11 +69,6 @@
 
 .homepage :global(.hero_hero__RUK01) {
   color: var(--color-text-primary-default);
-}
-
-.heroSection {
-  view-timeline-name: --homepage-hero-section;
-  view-timeline-axis: block;
 }
 
 .multiSectionBackground {

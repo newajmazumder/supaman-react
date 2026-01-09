@@ -51,18 +51,11 @@
   transition: rotate 0s ease;
 }
 
-.iconRotated {
-  rotate: -180deg;
-}
 
 .navLinkItemContainer {
   padding: var(--space-6x);
 }
 
-.navLinkItemColumn {
-  padding-block: var(--space-2x);
-  padding-inline: var(--space-4x);
-}
 
 .navLinkItem {
   padding-inline-start: var(--space-4x);

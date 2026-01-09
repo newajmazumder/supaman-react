@@ -11,7 +11,6 @@ import SuiteSection from "./components/sections/SuiteSection";
 import SvgDefs from "./components/sections/SvgDefs";
 import TrustedBySection from "./components/sections/TrustedBySection";
 import styles from "./styles/Homepage.module.css";
-import layoutStyles from "./styles/LayoutUtilities.module.css";
 
 const headData: SuperhumanHeadData = {
   title: "Superhuman: Docs, Mail, and AI That Work Everywhere",
@@ -110,7 +109,7 @@ export default function App() {
       <main>
         <BannerSection />
         <div className={styles.multiSectionBackground}>
-          <div className={`${layoutStyles.contentWrapper} ${styles.withVerticalBars}`}>
+          <div className={`${styles.contentWrapper} ${styles.withVerticalBars}`}>
             <TrustedBySection />
             <SuiteSection />
           </div>

@@ -201,13 +201,10 @@
 }
 
 .mediaWrapper,
-.mediaVideo,
-.mediaImage {
+.mediaVideo {
   height: 100%;
 }
 
-.mediaImage img,
-.mediaImage video,
 .mediaVideo img,
 .mediaVideo video {
   height: 100%;

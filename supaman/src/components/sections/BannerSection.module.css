@@ -40,15 +40,6 @@
   }
 }
 
-.hero:has(> &) {
-  position: relative;
-}
-
-.fireflies {
-  position: absolute;
-  z-index: 2;
-}
-
 .titleGroup {
   display: flex;
   flex-direction: column;

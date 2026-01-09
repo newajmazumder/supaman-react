@@ -6,9 +6,7 @@ export default function GlobalHeader() {
     <>
       {/* Sticky navigation header (styles come from scraped CSS assets). */}
       <header className={styles.header} data-global-header="true">
-        <div
-          className={`content-wrapper_contentWrapper__9WGiY ${styles.contentWrapper} ${styles.headerContent}`}
-        >
+        <div className={`${styles.contentWrapper} ${styles.headerContent}`}>
           <a className={`link_link__AAIEV ${styles.logo}`} href="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -98,9 +96,7 @@ export default function GlobalHeader() {
             <dialog className={styles.dialog}>
               <div className={`${styles.column} ${styles.dialogContent}`}>
                 <header className={styles.header}>
-                  <div
-                    className={`content-wrapper_contentWrapper__9WGiY ${styles.contentWrapper} ${styles.headerContent}`}
-                  >
+                  <div className={`${styles.contentWrapper} ${styles.headerContent}`}>
                     <a className={`link_link__AAIEV ${styles.logo}`} href="/">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
