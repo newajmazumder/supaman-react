@@ -1,10 +1,12 @@
+import styles from "./HeroBackground.module.css";
+
 export default function HeroBackground() {
   return (
     <>
       {/* Hero background video layer (fixed, behind content). */}
-      <div className="hero-background-video_videoContainer__Her4Q page_heroBackgroundVideo__7wznd">
+      <div className={styles.container}>
         <video
-          className="hero-background-video_video__nJeDf"
+          className={styles.video}
           autoPlay
           loop
           muted

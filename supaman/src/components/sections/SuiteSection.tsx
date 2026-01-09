@@ -1,4 +1,8 @@
 import { useEffect, useRef, useState } from "react";
+import styles from "./SuiteSection.module.css";
+import textStyles from "../../styles/HomepageText.module.css";
+import sectionStyles from "../../styles/Section.module.css";
+import gridStyles from "../../styles/Grid.module.css";
 
 const SECTION_IDS = [
   "tabbed-section-superhuman-mail",
@@ -10,6 +14,7 @@ const SECTION_IDS = [
 export default function SuiteSection() {
   const [activeId, setActiveId] = useState(SECTION_IDS[0]);
   const sectionRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const tabHeaderRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,18 +43,24 @@ export default function SuiteSection() {
     if (!el) {
       return;
     }
-    const offset = 120;
+    const globalHeader = document.querySelector<HTMLElement>('[data-global-header="true"]');
+    const offset =
+      (globalHeader?.getBoundingClientRect().height ?? 0) +
+      (tabHeaderRef.current?.getBoundingClientRect().height ?? 0);
     const top = el.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top, behavior: "smooth" });
     setActiveId(id);
   };
   return (
     <>
-      <section className="section_section___xslj" style={{ backgroundColor: "var(--neutral-10)" }}>
-        <div className="content-wrapper_contentWrapper__9WGiY tabbed-section_container__4xQi7">
-          <header className="tabbed-section-header_header__yi_x6">
-            <div className="tabbed-section-header_headerContent__xcILj">
-              <h2 className="text_text__RO8_0 homepage-text_headingMedium__DtV9j">
+      <section
+        className={sectionStyles.section}
+        style={{ backgroundColor: "var(--neutral-10)" }}
+      >
+        <div className={`${styles.contentWrapper} ${styles.container}`}>
+          <header className={styles.header} ref={tabHeaderRef}>
+            <div className={styles.headerContent}>
+              <h2 className={`text_text__RO8_0 ${textStyles.headingMedium}`}>
                 Your Superhuman suite
               </h2>
               <a
@@ -60,11 +71,11 @@ export default function SuiteSection() {
                 <span className="button_buttonContent__3qg6Y">Get the suite</span>
               </a>
             </div>
-            <div className="grid_grid__zNBn_ tabbed-section-header_nav__nxFkt" role="tablist">
+            <div className={`${gridStyles.grid} ${styles.nav}`} role="tablist">
               <button
-                className={`button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ${
+                className={`button_unstyled__Gf24r ${styles.navItem}${
                   activeId === "tabbed-section-superhuman-mail"
-                    ? " tabbed-section-header_active__JAG7a"
+                    ? ` ${styles.navItemActive}`
                     : ""
                 }`}
                 role="tab"
@@ -76,15 +87,17 @@ export default function SuiteSection() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23">
                     <use href="#superhuman-mail-with-background-icon"></use>
                   </svg>
-                  <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-header_navItemText__4eGgN">
+                  <h2
+                    className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.navItemText}`}
+                  >
                     Mail
                   </h2>
                 </span>
               </button>
               <button
-                className={`button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ${
+                className={`button_unstyled__Gf24r ${styles.navItem}${
                   activeId === "tabbed-section-grammarly"
-                    ? " tabbed-section-header_active__JAG7a"
+                    ? ` ${styles.navItemActive}`
                     : ""
                 }`}
                 role="tab"
@@ -96,14 +109,16 @@ export default function SuiteSection() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
                     <use href="#grammarly-bubble-icon"></use>
                   </svg>
-                  <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-header_navItemText__4eGgN">
+                  <h2
+                    className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.navItemText}`}
+                  >
                     Grammarly
                   </h2>
                 </span>
               </button>
               <button
-                className={`button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ${
-                  activeId === "tabbed-section-coda" ? " tabbed-section-header_active__JAG7a" : ""
+                className={`button_unstyled__Gf24r ${styles.navItem}${
+                  activeId === "tabbed-section-coda" ? ` ${styles.navItemActive}` : ""
                 }`}
                 role="tab"
                 aria-selected={activeId === "tabbed-section-coda"}
@@ -114,14 +129,16 @@ export default function SuiteSection() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19">
                     <use href="#coda-logo-icon"></use>
                   </svg>
-                  <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-header_navItemText__4eGgN">
+                  <h2
+                    className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.navItemText}`}
+                  >
                     Coda
                   </h2>
                 </span>
               </button>
               <button
-                className={`button_unstyled__Gf24r tabbed-section-header_navItem__EobAJ${
-                  activeId === "tabbed-section-go" ? " tabbed-section-header_active__JAG7a" : ""
+                className={`button_unstyled__Gf24r ${styles.navItem}${
+                  activeId === "tabbed-section-go" ? ` ${styles.navItemActive}` : ""
                 }`}
                 role="tab"
                 aria-selected={activeId === "tabbed-section-go"}
@@ -132,14 +149,16 @@ export default function SuiteSection() {
                   <svg xmlns="http://www.w3.org/2000/svg" width="17" height="23">
                     <use href="#go-logo-icon"></use>
                   </svg>
-                  <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-header_navItemText__4eGgN">
+                  <h2
+                    className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.navItemText}`}
+                  >
                     Go
                   </h2>
                 </span>
               </button>
             </div>
           </header>
-          <div className="display-column gap-9x tabbed-section_content__HWPtQ">
+          <div className={`${styles.column} ${styles.gap9x} ${styles.content}`}>
             <div
               id="tabbed-section-superhuman-mail"
               ref={(el) => {
@@ -147,37 +166,43 @@ export default function SuiteSection() {
               }}
               style={{ scrollMarginTop: "120px" }}
             >
-              <div className="two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ tabbed-section-content_container__OO3z5">
+              <div
+                className={`two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ ${styles.contentContainer}`}
+              >
                 <div
-                  className="display-column align-items-stretch justify-content-start two-column_column__I_bC4"
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyStart} two-column_column__I_bC4`}
                   style={{ ColumnGridSpan: "6" }}
                 >
-                  <div className="tabbed-section-content_titleWrapper__GIhEl">
+                  <div className={styles.titleWrapper}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23">
                       <use href="#superhuman-mail-with-background-icon"></use>
                     </svg>
-                    <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-content_title__4UbyC">
+                    <h2
+                      className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.title}`}
+                    >
                       Mail
                     </h2>
                   </div>
-                  <div className="display-column tabbed-section-content_content__0a86C">
+                  <div className={`${styles.column} ${styles.contentBody}`}>
                     <div>
-                      <h2 className="text_text__RO8_0 text_headerLarge__NqQNP text_fontWeightRegular__x7Y7W tabbed-section-content_heading__6kS6G">
+                      <h2
+                        className={`text_text__RO8_0 text_headerLarge__NqQNP text_fontWeightRegular__x7Y7W ${styles.heading}`}
+                      >
                         The most productive email app ever made
                       </h2>
                     </div>
-                    <div className="tabbed-section-content_copyWrapper__AP_f2">
+                    <div className={styles.copyWrapper}>
                       <p className="text_text__RO8_0 text_bodyMedium__dDqhi">
                         Fly through your inbox twice as fast as before, never drop the ball again,
                         and save 4 hours every single week.
                       </p>
                     </div>
-                    <div className="tabbed-section-content_linkWrapper__QOgMX">
+                    <div className={styles.linkWrapper}>
                       <a
-                        className="link_link__AAIEV tabbed-section-content_link__QLHSL"
+                        className={`link_link__AAIEV ${styles.link}`}
                         href="https://superhuman.com/products/mail"
                       >
-                        <span className="tabbed-section-content_linkText__rlEpj">
+                        <span className={styles.linkText}>
                           Learn more about Mail
                         </span>
                         <svg
@@ -199,27 +224,27 @@ export default function SuiteSection() {
                       </a>
                     </div>
                     <ul className="">
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Respond faster to what matters most
                       </li>
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Follow up on time, every time
                       </li>
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Write with AI that sounds like you
                       </li>
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Save 4 hours every single week
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div
-                  className="display-column align-items-stretch justify-content-center two-column_column__I_bC4"
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyCenter} two-column_column__I_bC4`}
                   style={{ ColumnGridSpan: "6" }}
                 >
-                  <div className="tabbed-section-content_mediaWrapper__o_2Gh">
-                    <div className="animation-video_animationVideo__vx3xK tabbed-section-content_video__Uah0n">
+                  <div className={styles.mediaWrapper}>
+                    <div className={`animation-video_animationVideo__vx3xK ${styles.mediaVideo}`}>
                       <video
                         className="video_video__EuXrX"
                         autoPlay
@@ -245,37 +270,43 @@ export default function SuiteSection() {
               }}
               style={{ scrollMarginTop: "120px" }}
             >
-              <div className="two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ tabbed-section-content_container__OO3z5">
+              <div
+                className={`two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ ${styles.contentContainer}`}
+              >
                 <div
-                  className="display-column align-items-stretch justify-content-start two-column_column__I_bC4"
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyStart} two-column_column__I_bC4`}
                   style={{ ColumnGridSpan: "6" }}
                 >
-                  <div className="tabbed-section-content_titleWrapper__GIhEl">
+                  <div className={styles.titleWrapper}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
                       <use href="#grammarly-bubble-icon"></use>
                     </svg>
-                    <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-content_title__4UbyC">
+                    <h2
+                      className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.title}`}
+                    >
                       Grammarly
                     </h2>
                   </div>
-                  <div className="display-column tabbed-section-content_content__0a86C">
+                  <div className={`${styles.column} ${styles.contentBody}`}>
                     <div>
-                      <h2 className="text_text__RO8_0 text_headerLarge__NqQNP text_fontWeightRegular__x7Y7W tabbed-section-content_heading__6kS6G">
+                      <h2
+                        className={`text_text__RO8_0 text_headerLarge__NqQNP text_fontWeightRegular__x7Y7W ${styles.heading}`}
+                      >
                         Everyone’s favorite AI writing partner
                       </h2>
                     </div>
-                    <div className="tabbed-section-content_copyWrapper__AP_f2">
+                    <div className={styles.copyWrapper}>
                       <p className="text_text__RO8_0 text_bodyMedium__dDqhi">
                         Turn your thoughts into writing that’s clear, credible, and impossible to
                         ignore.
                       </p>
                     </div>
-                    <div className="tabbed-section-content_linkWrapper__QOgMX">
+                    <div className={styles.linkWrapper}>
                       <a
-                        className="link_link__AAIEV tabbed-section-content_link__QLHSL"
+                        className={`link_link__AAIEV ${styles.link}`}
                         href="https://superhuman.com/products/grammarly"
                       >
-                        <span className="tabbed-section-content_linkText__rlEpj">
+                        <span className={styles.linkText}>
                           Learn more about Grammarly
                         </span>
                         <svg
@@ -297,27 +328,27 @@ export default function SuiteSection() {
                       </a>
                     </div>
                     <ul className="">
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Works everywhere you write
                       </li>
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Find the right words instantly
                       </li>
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Write with AI that adapts to your tone and voice
                       </li>
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Let your brilliance shine
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div
-                  className="display-column align-items-stretch justify-content-center two-column_column__I_bC4"
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyCenter} two-column_column__I_bC4`}
                   style={{ ColumnGridSpan: "6" }}
                 >
-                  <div className="tabbed-section-content_mediaWrapper__o_2Gh">
-                    <div className="animation-video_animationVideo__vx3xK tabbed-section-content_video__Uah0n">
+                  <div className={styles.mediaWrapper}>
+                    <div className={`animation-video_animationVideo__vx3xK ${styles.mediaVideo}`}>
                       <video
                         className="video_video__EuXrX"
                         autoPlay
@@ -343,37 +374,43 @@ export default function SuiteSection() {
               }}
               style={{ scrollMarginTop: "120px" }}
             >
-              <div className="two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ tabbed-section-content_container__OO3z5">
+              <div
+                className={`two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ ${styles.contentContainer}`}
+              >
                 <div
-                  className="display-column align-items-stretch justify-content-start two-column_column__I_bC4"
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyStart} two-column_column__I_bC4`}
                   style={{ ColumnGridSpan: "6" }}
                 >
-                  <div className="tabbed-section-content_titleWrapper__GIhEl">
+                  <div className={styles.titleWrapper}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19">
                       <use href="#coda-logo-icon"></use>
                     </svg>
-                    <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-content_title__4UbyC">
+                    <h2
+                      className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.title}`}
+                    >
                       Coda
                     </h2>
                   </div>
-                  <div className="display-column tabbed-section-content_content__0a86C">
+                  <div className={`${styles.column} ${styles.contentBody}`}>
                     <div>
-                      <h2 className="text_text__RO8_0 text_headerLarge__NqQNP text_fontWeightRegular__x7Y7W tabbed-section-content_heading__6kS6G">
+                      <h2
+                        className={`text_text__RO8_0 text_headerLarge__NqQNP text_fontWeightRegular__x7Y7W ${styles.heading}`}
+                      >
                         The all-in-one AI workspace for teams
                       </h2>
                     </div>
-                    <div className="tabbed-section-content_copyWrapper__AP_f2">
+                    <div className={styles.copyWrapper}>
                       <p className="text_text__RO8_0 text_bodyMedium__dDqhi">
                         Build everything from wikis, through project plans, to goal trackers —
                         keeping everyone perfectly in sync.
                       </p>
                     </div>
-                    <div className="tabbed-section-content_linkWrapper__QOgMX">
+                    <div className={styles.linkWrapper}>
                       <a
-                        className="link_link__AAIEV tabbed-section-content_link__QLHSL"
+                        className={`link_link__AAIEV ${styles.link}`}
                         href="https://superhuman.com/products/coda"
                       >
-                        <span className="tabbed-section-content_linkText__rlEpj">
+                        <span className={styles.linkText}>
                           Learn more about Coda
                         </span>
                         <svg
@@ -395,27 +432,27 @@ export default function SuiteSection() {
                       </a>
                     </div>
                     <ul className="">
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Connect Slack, Jira, Salesforce, and 800+ tools
                       </li>
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Build your team wiki, project plans, and company goal trackers
                       </li>
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Create a single source of truth for all your team’s knowledge
                       </li>
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Save time on manual tasks with Coda AI
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div
-                  className="display-column align-items-stretch justify-content-center two-column_column__I_bC4"
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyCenter} two-column_column__I_bC4`}
                   style={{ ColumnGridSpan: "6" }}
                 >
-                  <div className="tabbed-section-content_mediaWrapper__o_2Gh">
-                    <div className="animation-video_animationVideo__vx3xK tabbed-section-content_video__Uah0n">
+                  <div className={styles.mediaWrapper}>
+                    <div className={`animation-video_animationVideo__vx3xK ${styles.mediaVideo}`}>
                       <video
                         className="video_video__EuXrX"
                         autoPlay
@@ -441,37 +478,43 @@ export default function SuiteSection() {
               }}
               style={{ scrollMarginTop: "120px" }}
             >
-              <div className="two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ tabbed-section-content_container__OO3z5">
+              <div
+                className={`two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ ${styles.contentContainer}`}
+              >
                 <div
-                  className="display-column align-items-stretch justify-content-start two-column_column__I_bC4"
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyStart} two-column_column__I_bC4`}
                   style={{ ColumnGridSpan: "6" }}
                 >
-                  <div className="tabbed-section-content_titleWrapper__GIhEl">
+                  <div className={styles.titleWrapper}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="23">
                       <use href="#go-logo-icon"></use>
                     </svg>
-                    <h2 className="text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W tabbed-section-content_title__4UbyC">
+                    <h2
+                      className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.title}`}
+                    >
                       Go
                     </h2>
                   </div>
-                  <div className="display-column tabbed-section-content_content__0a86C">
+                  <div className={`${styles.column} ${styles.contentBody}`}>
                     <div>
-                      <h2 className="text_text__RO8_0 text_headerLarge__NqQNP text_fontWeightRegular__x7Y7W tabbed-section-content_heading__6kS6G">
+                      <h2
+                        className={`text_text__RO8_0 text_headerLarge__NqQNP text_fontWeightRegular__x7Y7W ${styles.heading}`}
+                      >
                         AI that actually works in every app you use
                       </h2>
                     </div>
-                    <div className="tabbed-section-content_copyWrapper__AP_f2">
+                    <div className={styles.copyWrapper}>
                       <p className="text_text__RO8_0 text_bodyMedium__dDqhi">
                         Go is the proactive AI assistant that knows what you know and offers help
                         without you having to ask.
                       </p>
                     </div>
-                    <div className="tabbed-section-content_linkWrapper__QOgMX">
+                    <div className={styles.linkWrapper}>
                       <a
-                        className="link_link__AAIEV tabbed-section-content_link__QLHSL"
+                        className={`link_link__AAIEV ${styles.link}`}
                         href="https://superhuman.com/products/go-ai-assistant"
                       >
-                        <span className="tabbed-section-content_linkText__rlEpj">
+                        <span className={styles.linkText}>
                           Learn more about Go
                         </span>
                         <svg
@@ -493,27 +536,27 @@ export default function SuiteSection() {
                       </a>
                     </div>
                     <ul className="">
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Connect Gmail, Drive, Jira, and all of your favorite apps
                       </li>
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Say the right thing with the right info, everywhere you write
                       </li>
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Schedule meetings without leaving the conversation
                       </li>
-                      <li className="list_listItem__z6Zqw tabbed-section-content_listItem__oNuIq">
+                      <li className={`${styles.listItemBase} ${styles.listItem}`}>
                         Work with any app, from any app
                       </li>
                     </ul>
                   </div>
                 </div>
                 <div
-                  className="display-column align-items-stretch justify-content-center two-column_column__I_bC4"
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyCenter} two-column_column__I_bC4`}
                   style={{ ColumnGridSpan: "6" }}
                 >
-                  <div className="tabbed-section-content_mediaWrapper__o_2Gh">
-                    <div className="animation-video_animationVideo__vx3xK tabbed-section-content_video__Uah0n">
+                  <div className={styles.mediaWrapper}>
+                    <div className={`animation-video_animationVideo__vx3xK ${styles.mediaVideo}`}>
                       <video
                         className="video_video__EuXrX"
                         autoPlay

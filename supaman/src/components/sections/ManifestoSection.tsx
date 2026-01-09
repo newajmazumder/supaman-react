@@ -1,18 +1,23 @@
+import styles from "./ManifestoSection.module.css";
+import textStyles from "../../styles/HomepageText.module.css";
+import sectionStyles from "../../styles/Section.module.css";
+import gridStyles from "../../styles/Grid.module.css";
+
 export default function ManifestoSection() {
   return (
     <>
       <section
-        className="section_section___xslj"
+        className={sectionStyles.section}
         style={{ backgroundColor: "var(--green-90)" }}
         data-color-scheme="dark"
       >
-        <div className="content-wrapper_contentWrapper__9WGiY">
-          <div className="grid_grid__zNBn_ grid_isReversed__n2a0O manifesto-section_grid__03LQi">
-            <div className="display-column align-items-start manifesto-section_column__DiWPB">
-              <h2 className="text_text__RO8_0 homepage-text_headingMedium__DtV9j manifesto-section_heading__EUG5b">
+        <div className={styles.contentWrapper}>
+          <div className={`${gridStyles.grid} ${gridStyles.isReversed} ${styles.grid}`}>
+            <div className={`${styles.columnLayout} ${styles.column}`}>
+              <h2 className={`text_text__RO8_0 ${textStyles.headingMedium} ${styles.heading}`}>
                 Becoming Superhuman.
               </h2>
-              <p className="text_text__RO8_0 homepage-text_copy__AN1p_ manifesto-section_copy___YICx">
+              <p className={`text_text__RO8_0 ${textStyles.copy} ${styles.copy}`}>
                 When AI works everywhere you work, it starts to change <em>how</em> you work. At
                 first, you think faster and more deeply. Before you know it, you have the time to be
                 more creative, strategic, and impactful—free to do what only you can do.
@@ -27,7 +32,7 @@ export default function ManifestoSection() {
                 </span>
               </a>
             </div>
-            <picture className="picture_responsive__QoHw7 manifesto-section_image__47hX0 full-bleed">
+            <picture className={`picture_responsive__QoHw7 full-bleed ${styles.image}`}>
               <source
                 srcSet="/assets/images/homepage-manifesto.webp__w_375_fm_avif 375w, assets/images/homepage-manifesto.webp__w_640_fm_avif 640w, assets/images/homepage-manifesto.webp__w_750_fm_avif 750w, assets/images/homepage-manifesto.webp__w_768_fm_avif 768w, assets/images/homepage-manifesto.webp__w_1080_fm_avif 1080w, assets/images/homepage-manifesto.webp__w_1125_fm_avif 1125w, assets/images/homepage-manifesto.webp__w_1280_fm_avif 1280w, assets/images/homepage-manifesto.webp__w_1536_fm_avif 1536w, assets/images/homepage-manifesto.webp__w_1920_fm_avif 1920w, assets/images/homepage-manifesto.webp__w_2160_fm_avif 2160w, assets/images/homepage-manifesto.webp__w_2304_fm_avif 2304w, assets/images/homepage-manifesto.webp__w_3240_fm_avif 3240w"
                 sizes="(max-width: 1024px) 100vw, (min-width: 1280px) 640px, (min-width: 1440px) 640px, 100vw"

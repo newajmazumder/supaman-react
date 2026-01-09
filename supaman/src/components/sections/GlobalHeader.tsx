@@ -1,10 +1,15 @@
+import styles from "./GlobalHeader.module.css";
+import navStyles from "../../styles/NavLinks.module.css";
+
 export default function GlobalHeader() {
   return (
     <>
       {/* Sticky navigation header (styles come from scraped CSS assets). */}
-      <header className="header_header__ZwL1v" data-global-header="true">
-        <div className="content-wrapper_contentWrapper__9WGiY header_headerContent__DOadP">
-          <a className="link_link__AAIEV header_logo__ymBro" href="/">
+      <header className={styles.header} data-global-header="true">
+        <div
+          className={`content-wrapper_contentWrapper__9WGiY ${styles.contentWrapper} ${styles.headerContent}`}
+        >
+          <a className={`link_link__AAIEV ${styles.logo}`} href="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="25"
@@ -15,18 +20,18 @@ export default function GlobalHeader() {
               <use href="#superhuman-logo"></use>
             </svg>
           </a>
-          <nav className="header_nav__DCyOO">
-            <ul className="nav-links_navList__uDPp_ nav-links_primary__Ay6V6">
+          <nav className={styles.nav}>
+            <ul className={`${navStyles.navList} ${navStyles.primary}`}>
               <li className="">
                 <div aria-expanded="false" aria-haspopup="menu" id="«R1l9mH1»">
-                  <button className="button_unstyled__Gf24r nav-links_navLink__2KNGH">
+                  <button className={`button_unstyled__Gf24r ${navStyles.navLink}`}>
                     <span className="button_buttonContent__3qg6Y">
                       <span className="text_text__RO8_0">Product</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="10"
                         height="10"
-                        className="nav-links_icon__aCSnq"
+                        className={navStyles.icon}
                       >
                         <use href="#arrow-down-icon"></use>
                       </svg>
@@ -36,26 +41,26 @@ export default function GlobalHeader() {
               </li>
               <li className="">
                 <a
-                  className="link_link__AAIEV nav-links_navLink__2KNGH"
+                  className={`link_link__AAIEV ${navStyles.navLink}`}
                   href="/solutions/enterprise"
                 >
                   Enterprise
                 </a>
               </li>
               <li className="">
-                <a className="link_link__AAIEV nav-links_navLink__2KNGH" href="/plans">
+                <a className={`link_link__AAIEV ${navStyles.navLink}`} href="/plans">
                   Pricing
                 </a>
               </li>
               <li className="">
-                <a className="link_link__AAIEV nav-links_navLink__2KNGH" href="/contact">
+                <a className={`link_link__AAIEV ${navStyles.navLink}`} href="/contact">
                   Contact us
                 </a>
               </li>
             </ul>
           </nav>
-          <div className="header_ctas__QEC__">
-            <div className="header_ctaButtons__CBQuw">
+          <div className={styles.ctas}>
+            <div className={styles.ctaButtons}>
               <a
                 className="link_link__AAIEV button_unstyled__Gf24r"
                 aria-disabled="false"
@@ -76,7 +81,7 @@ export default function GlobalHeader() {
                 </span>
               </a>
             </div>
-            <div className="header_menuButton__UCbUG">
+            <div className={styles.menuButton}>
               <button className="button_unstyled__Gf24r">
                 <span className="button_buttonContent__3qg6Y">
                   <svg
@@ -90,11 +95,13 @@ export default function GlobalHeader() {
                 </span>
               </button>
             </div>
-            <dialog className="header_dialog__oONHm">
-              <div className="display-column header_dialogContent__qtuNj">
-                <header className="header_header__ZwL1v">
-                  <div className="content-wrapper_contentWrapper__9WGiY header_headerContent__DOadP">
-                    <a className="link_link__AAIEV header_logo__ymBro" href="/">
+            <dialog className={styles.dialog}>
+              <div className={`${styles.column} ${styles.dialogContent}`}>
+                <header className={styles.header}>
+                  <div
+                    className={`content-wrapper_contentWrapper__9WGiY ${styles.contentWrapper} ${styles.headerContent}`}
+                  >
+                    <a className={`link_link__AAIEV ${styles.logo}`} href="/">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="25"
@@ -105,7 +112,7 @@ export default function GlobalHeader() {
                         <use href="#superhuman-logo"></use>
                       </svg>
                     </a>
-                    <div className="header_ctas__QEC__">
+                    <div className={styles.ctas}>
                       <button className="button_unstyled__Gf24r">
                         <span className="button_buttonContent__3qg6Y">
                           <svg
@@ -121,18 +128,18 @@ export default function GlobalHeader() {
                     </div>
                   </div>
                 </header>
-                <div className="header_dialogBody__anDWs">
+                <div className={styles.dialogBody}>
                   <nav className="">
-                    <ul className="nav-links_navList__uDPp_ nav-links_secondary__Kw_HK">
-                      <li className="nav-links_navListItem__SJ80V">
-                        <button className="button_unstyled__Gf24r nav-links_navLink__2KNGH">
+                    <ul className={`${navStyles.navList} ${navStyles.secondary}`}>
+                      <li className={navStyles.navListItem}>
+                        <button className={`button_unstyled__Gf24r ${navStyles.navLink}`}>
                           <span className="button_buttonContent__3qg6Y">
                             <span className="text_text__RO8_0">Product</span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="10"
                               height="10"
-                              className="nav-links_icon__aCSnq"
+                              className={navStyles.icon}
                             >
                               <use href="#arrow-down-icon"></use>
                             </svg>
@@ -140,44 +147,44 @@ export default function GlobalHeader() {
                         </button>
                         <div
                           role="menu"
-                          className="nav-links_navLinkItemContainer__nO6D6 display-none"
+                          className={`${navStyles.navLinkItemContainer} display-none`}
                         >
-                          <ul className="display-column gap-4x">
-                            <li className="nav-links_navMenuListItem__wsNGF">
+                          <ul className={`${styles.column} ${styles.gap4x}`}>
+                            <li className={navStyles.navMenuListItem}>
                               <a
-                                className="link_link__AAIEV nav-links_navLink__2KNGH nav-links_navLinkItem__WLg_p"
+                                className={`link_link__AAIEV ${navStyles.navLink} ${navStyles.navLinkItem}`}
                                 href="/products/go-ai-assistant"
                               >
                                 Superhuman Go
                               </a>
                             </li>
-                            <li className="nav-links_navMenuListItem__wsNGF">
+                            <li className={navStyles.navMenuListItem}>
                               <a
-                                className="link_link__AAIEV nav-links_navLink__2KNGH nav-links_navLinkItem__WLg_p"
+                                className={`link_link__AAIEV ${navStyles.navLink} ${navStyles.navLinkItem}`}
                                 href="/products/grammarly"
                               >
                                 Grammarly
                               </a>
                             </li>
-                            <li className="nav-links_navMenuListItem__wsNGF">
+                            <li className={navStyles.navMenuListItem}>
                               <a
-                                className="link_link__AAIEV nav-links_navLink__2KNGH nav-links_navLinkItem__WLg_p"
+                                className={`link_link__AAIEV ${navStyles.navLink} ${navStyles.navLinkItem}`}
                                 href="/products/coda"
                               >
                                 Coda
                               </a>
                             </li>
-                            <li className="nav-links_navMenuListItem__wsNGF">
+                            <li className={navStyles.navMenuListItem}>
                               <a
-                                className="link_link__AAIEV nav-links_navLink__2KNGH nav-links_navLinkItem__WLg_p"
+                                className={`link_link__AAIEV ${navStyles.navLink} ${navStyles.navLinkItem}`}
                                 href="https://superhuman.com/products/mail"
                               >
                                 Superhuman Mail
                               </a>
                             </li>
-                            <li className="nav-links_navMenuListItem__wsNGF">
+                            <li className={navStyles.navMenuListItem}>
                               <a
-                                className="link_link__AAIEV nav-links_navLink__2KNGH nav-links_navLinkItem__WLg_p"
+                                className={`link_link__AAIEV ${navStyles.navLink} ${navStyles.navLinkItem}`}
                                 href="https://superhuman.com/store/agents"
                               >
                                 Agent Store
@@ -186,28 +193,28 @@ export default function GlobalHeader() {
                           </ul>
                         </div>
                       </li>
-                      <li className="nav-links_navListItem__SJ80V">
+                      <li className={navStyles.navListItem}>
                         <a
-                          className="link_link__AAIEV nav-links_navLink__2KNGH"
+                          className={`link_link__AAIEV ${navStyles.navLink}`}
                           href="/solutions/enterprise"
                         >
                           Enterprise
                         </a>
                       </li>
-                      <li className="nav-links_navListItem__SJ80V">
-                        <a className="link_link__AAIEV nav-links_navLink__2KNGH" href="/plans">
+                      <li className={navStyles.navListItem}>
+                        <a className={`link_link__AAIEV ${navStyles.navLink}`} href="/plans">
                           Pricing
                         </a>
                       </li>
-                      <li className="nav-links_navListItem__SJ80V">
-                        <a className="link_link__AAIEV nav-links_navLink__2KNGH" href="/contact">
+                      <li className={navStyles.navListItem}>
+                        <a className={`link_link__AAIEV ${navStyles.navLink}`} href="/contact">
                           Contact us
                         </a>
                       </li>
                     </ul>
                   </nav>
                 </div>
-                <footer className="header_dialogFooter__XHlLz">
+                <footer className={styles.dialogFooter}>
                   <a
                     className="link_link__AAIEV button_unstyled__Gf24r"
                     aria-disabled="false"

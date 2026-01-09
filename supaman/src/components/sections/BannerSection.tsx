@@ -1,14 +1,29 @@
+import type { CSSProperties } from "react";
+import bannerStyles from "./BannerSection.module.css";
+import sectionStyles from "../../styles/Section.module.css";
+
 export default function BannerSection() {
   return (
     <>
       {/* Hero section content layer (text + visuals). */}
-      <section className="section_section___xslj" data-color-scheme="dark">
-        <div className="content-wrapper_contentWrapper__9WGiY hero_hero__RUK01 page_heroSection__WbWUz">
-          <div className="display-column align-items-center hero_titleGroup__k_ru1">
-            <h1 className="text_text__RO8_0 homepage-text_heroTitle__r7q9C hero_title__s3tU_">
+      <section
+        className={`section_section___xslj ${sectionStyles.section}`}
+        data-color-scheme="dark"
+      >
+        <div
+          className={`content-wrapper_contentWrapper__9WGiY ${bannerStyles.contentWrapper} page_heroSection__WbWUz ${bannerStyles.hero}`}
+        >
+          <div
+            className={bannerStyles.titleGroup}
+          >
+            <h1
+              className={`text_text__RO8_0 homepage-text_heroTitle__r7q9C ${bannerStyles.title}`}
+            >
               Superpowers, everywhere you work
             </h1>
-            <h2 className="text_text__RO8_0 homepage-text_heroHeading__yqrt3 hero_heading__47OM6">
+            <h2
+              className={`text_text__RO8_0 homepage-text_heroHeading__yqrt3 ${bannerStyles.heading}`}
+            >
               Mail, Docs, and AI that works in every app and tab
             </h2>
             <a
@@ -29,9 +44,11 @@ export default function BannerSection() {
               </span>
             </a>
           </div>
-          <div className="display-stack hero_visualsContainer__1sJRx">
-            <figure className="full-bleed hero_personPictureContainer__V7jHr">
-              <picture className="picture_responsive__QoHw7 hero_personPicture__rrNt2">
+          <div
+            className={bannerStyles.visualsContainer}
+          >
+            <figure className={`full-bleed ${bannerStyles.personPictureContainer}`}>
+              <picture className={`picture_responsive__QoHw7 ${bannerStyles.personPicture}`}>
                 <source
                   srcSet="/assets/images/person-5.webp__w_375_fm_avif 375w, assets/images/person-5.webp__w_640_fm_avif 640w, assets/images/person-5.webp__w_750_fm_avif 750w, assets/images/person-5.webp__w_768_fm_avif 768w, assets/images/person-5.webp__w_1080_fm_avif 1080w, assets/images/person-5.webp__w_1125_fm_avif 1125w, assets/images/person-5.webp__w_1280_fm_avif 1280w, assets/images/person-5.webp__w_1536_fm_avif 1536w, assets/images/person-5.webp__w_1920_fm_avif 1920w, assets/images/person-5.webp__w_2160_fm_avif 2160w, assets/images/person-5.webp__w_2304_fm_avif 2304w, assets/images/person-5.webp__w_3240_fm_avif 3240w"
                   sizes="(max-width: 1024px) 100vw, (min-width: 1280px) 640px, (min-width: 1440px) 640px, 100vw"
@@ -58,13 +75,13 @@ export default function BannerSection() {
                 />
               </picture>
             </figure>
-            <div className="display-column gap-6x hero_visualGroup1__gF_b5">
-              <div className="display-row align-items-center gap-6x">
+            <div className={bannerStyles.visualGroup1}>
+              <div className={bannerStyles.visualRow}>
                 <div
-                  className="hero-card_card__SIZev chat_chat__QS9Eh hero_visual__Sp99S hero_visual1__50qcm"
-                  style={{ Index: "1" }}
+                  className={`hero-card_card__SIZev chat_chat__QS9Eh ${bannerStyles.visual} ${bannerStyles.visual1}`}
+                  style={{ "--index": 1 } as CSSProperties}
                 >
-                  <div className="display-column gap-4x">
+                  <div className={bannerStyles.columnGap4x}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="17"
@@ -73,7 +90,7 @@ export default function BannerSection() {
                     >
                       <use href="#hero-icon"></use>
                     </svg>
-                    <div className="display-column gap-2x">
+                    <div className={bannerStyles.columnGap2x}>
                       <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B chat_message__oorK8">
                         Looks like you&#x27;re chatting with Antonio and Laura in the{" "}
                         <span>#launch-project-chat</span> and need to book a meeting. Would you like
@@ -84,8 +101,8 @@ export default function BannerSection() {
                       </span>
                       <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B chat_message__oorK8 chat_hasSuggestions__5w3Tw">
                         You&#x27;re all available during these times:
-                        <div className="display-row align-items-center gap-1x chat_suggestions__CldPS">
-                          <span className="display-row align-items-center gap-1x">
+                        <div className={`${bannerStyles.rowCenterGap1x} chat_suggestions__CldPS`}>
+                          <span className={bannerStyles.rowCenterGap1x}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="13"
@@ -110,7 +127,7 @@ export default function BannerSection() {
                             </svg>
                             Monday at 3:00 PM
                           </span>
-                          <span className="display-row align-items-center gap-1x">
+                          <span className={bannerStyles.rowCenterGap1x}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="13"
@@ -138,7 +155,7 @@ export default function BannerSection() {
                         </div>
                       </span>
                       <div className="chat_textInput__llIdI">
-                        <div className="display-row align-items-end justify-content-space-between gap-4x">
+                        <div className={bannerStyles.rowEndSpaceBetweenGap4x}>
                           <p className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
                             book it for monday
                           </p>
@@ -156,11 +173,11 @@ export default function BannerSection() {
                   </div>
                 </div>
                 <div
-                  className="hero-card_card__SIZev agents_agents__3ZOtq hero_visual__Sp99S hero_visual2__90fs6"
-                  style={{ Index: "2" }}
+                  className={`hero-card_card__SIZev agents_agents__3ZOtq ${bannerStyles.visual} ${bannerStyles.visual2}`}
+                  style={{ "--index": 2 } as CSSProperties}
                 >
-                  <div className="display-column gap-2x">
-                    <div className="display-stack agents_agent__1dXFp">
+                  <div className={bannerStyles.columnGap2x}>
+                    <div className={`agents_agent__1dXFp ${bannerStyles.stack}`}>
                       <div className="agents_selected__1z99W"></div>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +188,7 @@ export default function BannerSection() {
                         <use href="#hero-icon"></use>
                       </svg>
                     </div>
-                    <div className="display-stack agents_agent__1dXFp">
+                    <div className={`agents_agent__1dXFp ${bannerStyles.stack}`}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="19"
@@ -181,7 +198,7 @@ export default function BannerSection() {
                         <use href="#grammarly-logo-icon"></use>
                       </svg>
                     </div>
-                    <div className="display-stack agents_agent__1dXFp">
+                    <div className={`agents_agent__1dXFp ${bannerStyles.stack}`}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="22"
@@ -191,7 +208,7 @@ export default function BannerSection() {
                         <use href="#humanizer-icon"></use>
                       </svg>
                     </div>
-                    <div className="display-stack agents_agent__1dXFp">
+                    <div className={`agents_agent__1dXFp ${bannerStyles.stack}`}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="22"
@@ -201,7 +218,7 @@ export default function BannerSection() {
                         <use href="#citation-finder-icon"></use>
                       </svg>
                     </div>
-                    <div className="display-stack agents_agent__1dXFp">
+                    <div className={`agents_agent__1dXFp ${bannerStyles.stack}`}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="21"
@@ -214,13 +231,13 @@ export default function BannerSection() {
                   </div>
                 </div>
               </div>
-              <div className="display-stack hero_mail__l7Bqz">
+              <div className={bannerStyles.mail}>
                 <div
-                  className="hero-card_card__SIZev mail_mail__WHUsM hero_visual__Sp99S hero_visual6__PweRA"
-                  style={{ Index: "6" }}
+                  className={`hero-card_card__SIZev mail_mail__WHUsM ${bannerStyles.visual} ${bannerStyles.visual6}`}
+                  style={{ "--index": 6 } as CSSProperties}
                 >
                   <div className="mail_menu__dS5rb"></div>
-                  <div className="display-row align-items-center gap-1x">
+                  <div className={bannerStyles.rowCenterGap1x}>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
                       Important
                     </span>
@@ -228,19 +245,19 @@ export default function BannerSection() {
                       12
                     </span>
                   </div>
-                  <div className="display-row align-items-center gap-1x">
+                  <div className={bannerStyles.rowCenterGap1x}>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Calendar</span>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
                       13
                     </span>
                   </div>
-                  <div className="display-row align-items-center gap-1x">
+                  <div className={bannerStyles.rowCenterGap1x}>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Docs</span>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
                       8
                     </span>
                   </div>
-                  <div className="display-row align-items-center gap-1x">
+                  <div className={bannerStyles.rowCenterGap1x}>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Other</span>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
                       19
@@ -248,7 +265,7 @@ export default function BannerSection() {
                   </div>
                   <div className="mail_message__d496T mail_selectedMessage__Xicr3"></div>
                   <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Sarah Kim</span>
-                  <div className="display-row align-items-center gap-2x mail_messageContent__655WM">
+                  <div className={`${bannerStyles.rowCenterGap2x} mail_messageContent__655WM`}>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
                       Design Review moved to Thursday
                     </span>
@@ -261,7 +278,7 @@ export default function BannerSection() {
                   <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
                     James Patel
                   </span>
-                  <div className="display-row align-items-center gap-2x mail_messageContent__655WM">
+                  <div className={`${bannerStyles.rowCenterGap2x} mail_messageContent__655WM`}>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
                       Feedback on your client presentation
                     </span>
@@ -271,7 +288,7 @@ export default function BannerSection() {
                   </div>
                   <div className="mail_message__d496T"></div>
                   <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Laura Chen</span>
-                  <div className="display-row align-items-center gap-2x mail_messageContent__655WM">
+                  <div className={`${bannerStyles.rowCenterGap2x} mail_messageContent__655WM`}>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
                       Coffee next week?
                     </span>
@@ -282,7 +299,7 @@ export default function BannerSection() {
                   </div>
                   <div className="mail_message__d496T"></div>
                   <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">HR Team</span>
-                  <div className="display-row align-items-center gap-2x mail_messageContent__655WM">
+                  <div className={`${bannerStyles.rowCenterGap2x} mail_messageContent__655WM`}>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
                       Reminder: Open enrollment closes Friday
                     </span>
@@ -295,7 +312,7 @@ export default function BannerSection() {
                   <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
                     Mike Torres
                   </span>
-                  <div className="display-row align-items-center gap-2x mail_messageContent__655WM">
+                  <div className={`${bannerStyles.rowCenterGap2x} mail_messageContent__655WM`}>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
                       Sprint planning agenda attached
                     </span>
@@ -305,10 +322,10 @@ export default function BannerSection() {
                   </div>
                 </div>
                 <div
-                  className="hero-card_card__SIZev tool_tool__lFuFb tool_isScheduler__ifisn hero_visual__Sp99S hero_visual7___zvrs"
-                  style={{ Index: "7" }}
+                  className={`hero-card_card__SIZev tool_tool__lFuFb tool_isScheduler__ifisn ${bannerStyles.visual} ${bannerStyles.visual7}`}
+                  style={{ "--index": 7 } as CSSProperties}
                 >
-                  <div className="display-row align-items-center gap-2x flex-wrap">
+                  <div className={bannerStyles.rowCenterGap2xWrap}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
                       <use href="#sparkle-icon"></use>
                     </svg>
@@ -319,12 +336,12 @@ export default function BannerSection() {
                 </div>
               </div>
             </div>
-            <div className="display-column align-items-end gap-6x hero_visualGroup2__HRZEr">
+            <div className={bannerStyles.visualGroup2}>
               <div
-                className="hero-card_card__SIZev tool_tool__lFuFb hero_visual__Sp99S"
-                style={{ Index: "3" }}
+                className={`hero-card_card__SIZev tool_tool__lFuFb ${bannerStyles.visual} ${bannerStyles.visual3}`}
+                style={{ "--index": 3 } as CSSProperties}
               >
-                <div className="display-row align-items-center gap-2x">
+                <div className={bannerStyles.rowCenterGap2x}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19">
                     <use href="#reader-reactions-icon"></use>
                   </svg>
@@ -334,11 +351,11 @@ export default function BannerSection() {
                 </div>
               </div>
               <div
-                className="hero-card_card__SIZev editor_editor__lP_f3 hero_visual__Sp99S hero_visual4__m0_Jz"
-                style={{ Index: "4" }}
+                className={`hero-card_card__SIZev editor_editor__lP_f3 ${bannerStyles.visual} ${bannerStyles.visual4}`}
+                style={{ "--index": 4 } as CSSProperties}
               >
-                <div className="display-column gap-4x">
-                  <div className="display-row align-items-center gap-2x">
+                <div className={bannerStyles.columnGap4x}>
+                  <div className={bannerStyles.rowCenterGap2x}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                       <use href="#home-icon"></use>
                     </svg>
@@ -355,7 +372,7 @@ export default function BannerSection() {
                       <use href="#gear-icon"></use>
                     </svg>
                   </div>
-                  <div className="display-column gap-3x">
+                  <div className={bannerStyles.columnGap3x}>
                     <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
                       Streamlining Team Documentation
                     </span>
@@ -369,8 +386,8 @@ export default function BannerSection() {
                       more real-world examples, I think it&#x27;ll cut down on <u>repetative</u>{" "}
                       questions and help people ramp up faster.
                     </span>
-                    <div className="display-row align-items-center editor_toolbar__jLb_Y">
-                      <div className="display-row align-items-center gap-0.5x editor_toolbarItem__roylq">
+                    <div className={`${bannerStyles.rowCenter} editor_toolbar__jLb_Y`}>
+                      <div className={`${bannerStyles.rowCenterGap0_5x} editor_toolbarItem__roylq`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
                           <use href="#font-icon"></use>
                         </svg>
@@ -383,27 +400,27 @@ export default function BannerSection() {
                           <use href="#arrow-down-icon"></use>
                         </svg>
                       </div>
-                      <div className="display-row align-items-center gap-0.5x editor_toolbarItem__roylq">
+                      <div className={`${bannerStyles.rowCenterGap0_5x} editor_toolbarItem__roylq`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
                           <use href="#bold-icon"></use>
                         </svg>
                       </div>
-                      <div className="display-row align-items-center gap-0.5x editor_toolbarItem__roylq">
+                      <div className={`${bannerStyles.rowCenterGap0_5x} editor_toolbarItem__roylq`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                           <use href="#italic-icon"></use>
                         </svg>
                       </div>
-                      <div className="display-row align-items-center gap-0.5x editor_toolbarItem__roylq">
+                      <div className={`${bannerStyles.rowCenterGap0_5x} editor_toolbarItem__roylq`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
                           <use href="#underline-icon"></use>
                         </svg>
                       </div>
-                      <div className="display-row align-items-center gap-0.5x editor_toolbarItem__roylq">
+                      <div className={`${bannerStyles.rowCenterGap0_5x} editor_toolbarItem__roylq`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
                           <use href="#strikethrough-icon"></use>
                         </svg>
                       </div>
-                      <div className="display-row align-items-center gap-0.5x editor_toolbarItem__roylq">
+                      <div className={`${bannerStyles.rowCenterGap0_5x} editor_toolbarItem__roylq`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                           <use href="#align-start-icon"></use>
                         </svg>
@@ -421,10 +438,10 @@ export default function BannerSection() {
                 </div>
               </div>
               <div
-                className="hero-card_card__SIZev tool_tool__lFuFb hero_visual__Sp99S hero_visual5__nZcjK"
-                style={{ Index: "5" }}
+                className={`hero-card_card__SIZev tool_tool__lFuFb ${bannerStyles.visual} ${bannerStyles.visual5}`}
+                style={{ "--index": 5 } as CSSProperties}
               >
-                <div className="display-row align-items-center gap-2x">
+                <div className={bannerStyles.rowCenterGap2x}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18">
                     <use href="#grammarly-logo-icon"></use>
                   </svg>
@@ -434,10 +451,10 @@ export default function BannerSection() {
                 </div>
               </div>
               <div
-                className="hero-card_card__SIZev tool_tool__lFuFb tool_isScheduler__ifisn hero_visual__Sp99S hero_visual8__9Ow1S"
-                style={{ Index: "6" }}
+                className={`hero-card_card__SIZev tool_tool__lFuFb tool_isScheduler__ifisn ${bannerStyles.visual} ${bannerStyles.visual8}`}
+                style={{ "--index": 6 } as CSSProperties}
               >
-                <div className="display-row align-items-center gap-2x flex-wrap">
+                <div className={bannerStyles.rowCenterGap2xWrap}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
                     <use href="#sparkle-icon"></use>
                   </svg>

@@ -1,0 +1,108 @@
+.homepage {
+  --content-max-width: 1440px;
+  --color-border-focus: light-dark(var(--sky-60), var(--sky-60));
+  --header-has-blur: initial;
+  timeline-scope: --homepage-hero-section;
+}
+
+@property --header-opacity {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .homepage :global([data-banner]) {
+    background-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .homepage :global([data-global-header]) {
+    color-scheme: dark;
+    background-color: light-dark(
+      rgb(from var(--white) r g b/var(--header-opacity)),
+      rgb(from var(--white) r g b/var(--header-opacity))
+    );
+    border-color: rgb(from var(--color-border-primary-default) r g b/var(--header-opacity));
+    -webkit-backdrop-filter: var(--header-has-blur) blur(12px);
+    backdrop-filter: var(--header-has-blur) blur(12px);
+  }
+
+  .homepage :global([data-global-header]) :global([role="menu"]),
+  .homepage :global([data-global-header]) :global(dialog) {
+    color-scheme: light;
+  }
+
+  @supports (animation-timeline: scroll()) {
+    .homepage :global([data-global-header]) {
+      animation:
+        header-fade-in cubic-bezier(0.7, 0, 0.84, 0) forwards,
+        header-remove-blur step-end forwards;
+      animation-timeline: --homepage-hero-section;
+      animation-range: exit-crossing calc((-1 * var(--page-header-height)) + 1px) exit-crossing
+        calc(100% - var(--page-header-height));
+    }
+  }
+}
+
+.homepage :global(.hero_hero__RUK01) {
+  color: var(--color-text-primary-default);
+}
+
+.heroSection {
+  view-timeline-name: --homepage-hero-section;
+  view-timeline-axis: block;
+}
+
+.multiSectionBackground {
+  background-color: var(--neutral-10);
+}
+
+.withVerticalBars {
+  padding-inline: var(--space-0x);
+}
+
+@media (min-width: 768px) {
+  .withVerticalBars {
+    --accent-bars-width: 36px;
+    position: relative;
+    padding-inline: var(--accent-bars-width);
+  }
+
+  .withVerticalBars::before,
+  .withVerticalBars::after {
+    content: "";
+    position: absolute;
+    background-color: var(--neutral-10);
+    background-image: repeating-linear-gradient(-45deg, var(--gradient-diagonal-line));
+    border-inline: 1px solid #dcd7d3;
+    width: var(--accent-bars-width);
+    height: 100%;
+    top: 0;
+  }
+
+  .withVerticalBars::before {
+    left: 0;
+  }
+
+  .withVerticalBars::after {
+    right: 0;
+  }
+}
+
+@keyframes header-fade-in {
+  to {
+    --header-opacity: 100%;
+    color-scheme: light;
+  }
+}
+
+@keyframes header-remove-blur {
+  0% {
+    --header-has-blur: ;
+  }
+  to {
+    --header-has-blur: initial;
+  }
+}

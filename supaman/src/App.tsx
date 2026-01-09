@@ -10,6 +10,8 @@ import NoScriptTag from "./components/sections/NoScriptTag";
 import SuiteSection from "./components/sections/SuiteSection";
 import SvgDefs from "./components/sections/SvgDefs";
 import TrustedBySection from "./components/sections/TrustedBySection";
+import styles from "./styles/Homepage.module.css";
+import layoutStyles from "./styles/LayoutUtilities.module.css";
 
 const headData: SuperhumanHeadData = {
   title: "Superhuman: Docs, Mail, and AI That Work Everywhere",
@@ -25,13 +27,10 @@ const headData: SuperhumanHeadData = {
   cssLinks: [
     "/styles/reset-theme-base.css",
     "/styles/layout-header-footer.css",
-    "/styles/sections-tabbed-homepage.css",
-    "/styles/typography-hero-bg.css",
-    "/styles/cta-rich-text.css",
-    "/styles/nav-links.css",
-    "/styles/trusted-by-accordion.css",
     "/styles/banner.css",
     "/styles/hero-page.css",
+    "/styles/sections-tabbed-homepage.css",
+    "/styles/typography-hero-bg.css",
   ],
   fontFaceCss: `@font-face {\n  font-family: "Super Sans";\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url('/assets/superhumanstatic.com/super-funnel/main/public/fonts/v1/SuperSans-Regular.otf') format('opentype');\n}\n\n@font-face {\n  font-family: "Super Sans";\n  font-style: normal;\n  font-weight: 500;\n  font-display: swap;\n  src: url('/assets/superhumanstatic.com/super-funnel/main/public/fonts/v1/SuperSans-Medium.otf') format('opentype');\n}\n\n@font-face {\n  font-family: "Super Sans Mono";\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url('/assets/superhumanstatic.com/super-funnel/main/public/fonts/v1/SuperSans-Regular.otf') format('opentype');\n}\n\n@font-face {\n  font-family: "Super Serif";\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url('/assets/superhumanstatic.com/super-funnel/main/public/fonts/v1/SuperSerif-Regular.otf') format('opentype');\n}\n\n@font-face {\n  font-family: "Super Serif";\n  font-style: italic;\n  font-weight: 400;\n  font-display: swap;\n  src: url('/assets/superhumanstatic.com/super-funnel/main/public/fonts/v1/SuperSerif-RegularItalic.otf') format('opentype');\n}\n\n@font-face {\n  font-family: "Super Serif";\n  font-style: normal;\n  font-weight: 580;\n  font-display: swap;\n  src: url('/assets/superhumanstatic.com/super-funnel/main/public/fonts/v1/SuperSerif-SemiBold.otf') format('opentype');\n}`,
   icons: [
@@ -59,7 +58,7 @@ const headData: SuperhumanHeadData = {
 export default function App() {
   useEffect(() => {
     const header = document.querySelector<HTMLElement>('[data-global-header="true"]');
-    const heroSection = document.querySelector<HTMLElement>(".page_heroSection__WbWUz");
+    const heroSection = document.querySelector<HTMLElement>('[data-hero-section="true"]');
 
     if (!header || !heroSection) {
       return;
@@ -102,7 +101,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="page_homepage__4yZNE">
+    <div className={styles.homepage}>
       <SuperhumanHead data={headData} />
       <NoScriptTag />
       <HeroBackground />
@@ -110,8 +109,8 @@ export default function App() {
       <GlobalHeader />
       <main>
         <BannerSection />
-        <div className="page_multiSectionBackground__WAzbj">
-          <div className="content-wrapper_contentWrapper__9WGiY page_withVerticalBars__dpqpG">
+        <div className={styles.multiSectionBackground}>
+          <div className={`${layoutStyles.contentWrapper} ${styles.withVerticalBars}`}>
             <TrustedBySection />
             <SuiteSection />
           </div>

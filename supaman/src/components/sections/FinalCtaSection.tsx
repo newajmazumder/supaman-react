@@ -1,14 +1,18 @@
+import styles from "./FinalCtaSection.module.css";
+import textStyles from "../../styles/HomepageText.module.css";
+import sectionStyles from "../../styles/Section.module.css";
+
 export default function FinalCtaSection() {
   return (
     <>
       <section
-        className="section_section___xslj"
+        className={sectionStyles.section}
         style={{
           background:
             "center/cover no-repeat, linear-gradient(270deg, #554DCB 9.04%, #86CBF9 84.36%, #F7DBFF 100%)",
         }}
       >
-        <div className="section_background__xBnYM">
+        <div className={sectionStyles.background}>
           <picture className="picture_responsive__QoHw7">
             <source
               srcSet="/assets/images/homepage-tonal-flower.webp__w_375_fm_avif 375w, assets/images/homepage-tonal-flower.webp__w_750_fm_avif 750w, assets/images/homepage-tonal-flower.webp__w_768_fm_avif 768w, assets/images/homepage-tonal-flower.webp__w_1080_fm_avif 1080w, assets/images/homepage-tonal-flower.webp__w_1125_fm_avif 1125w, assets/images/homepage-tonal-flower.webp__w_1280_fm_avif 1280w, assets/images/homepage-tonal-flower.webp__w_1536_fm_avif 1536w, assets/images/homepage-tonal-flower.webp__w_2160_fm_avif 2160w, assets/images/homepage-tonal-flower.webp__w_2304_fm_avif 2304w, assets/images/homepage-tonal-flower.webp__w_2560_fm_avif 2560w, assets/images/homepage-tonal-flower.webp__w_3240_fm_avif 3240w, assets/images/homepage-tonal-flower.webp__w_3840_fm_avif 3840w"
@@ -36,8 +40,8 @@ export default function FinalCtaSection() {
             />
           </picture>
         </div>
-        <div className="content-wrapper_contentWrapper__9WGiY superhuman-section_section__OX2tF">
-          <h2 className="text_text__RO8_0 homepage-text_headingLarge__rCu_X">
+        <div className={`${styles.contentWrapper} ${styles.section}`}>
+          <h2 className={`text_text__RO8_0 ${textStyles.headingLarge}`}>
             AI that works everywhere you work
           </h2>
           <a

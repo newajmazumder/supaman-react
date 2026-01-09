@@ -1,0 +1,202 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: calc(var(--z-index-sticky) + 1);
+  background-color: var(--color-bg-primary-default);
+  color: var(--color-text-primary-default);
+  border-block-end: 1px solid var(--color-border-primary-default);
+  height: var(--page-header-height);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.contentWrapper {
+  --mobile-padding-inline: var(--space-4x);
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-4x);
+  container-type: inline-size;
+  box-sizing: content-box;
+}
+
+@media (min-width: 641px) {
+  .contentWrapper {
+    padding-inline: var(--space-6x);
+  }
+}
+
+@media (min-width: 1281px) {
+  .contentWrapper {
+    padding-inline: var(--space-9x);
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap4x {
+  gap: var(--space-4x);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 4.2rem;
+}
+
+.nav {
+  margin-inline-start: var(--space-8x);
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .nav {
+    display: block;
+  }
+}
+
+.ctas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4x);
+  margin-inline-start: auto;
+}
+
+.ctaButtons {
+  display: none;
+}
+
+.ctaButtons [data-nav-link] {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3.6rem;
+  text-decoration: none;
+}
+
+.ctaButtons [data-nav-link]:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (min-width: 513px) {
+  .ctaButtons {
+    display: contents;
+  }
+}
+
+.menuButton {
+  display: contents;
+}
+
+@media (min-width: 769px) {
+  .menuButton {
+    display: none;
+  }
+}
+
+.dialog {
+  background-color: var(--color-bg-primary-default);
+  color: var(--color-text-primary-default);
+  border: none;
+  padding: 0;
+  margin: 0;
+  inset: 0;
+  height: 100dvh;
+  width: 100dvw;
+  max-height: none;
+  max-width: none;
+}
+
+.dialog:is(:open, [open]) {
+  animation: slide-in 0.3s ease-out;
+}
+
+.dialog:is(:open, [open])::-webkit-backdrop {
+  animation: backdrop-fade-in 0.3s ease-out;
+}
+
+.dialog:is(:open, [open])::backdrop {
+  animation: backdrop-fade-in 0.3s ease-out;
+}
+
+.dialog:is([closing]) {
+  animation: slide-out 0.3s ease-out;
+}
+
+.dialog:is([closing])::-webkit-backdrop {
+  animation: backdrop-fade-out 0.3s ease-out;
+}
+
+.dialog:is([closing])::backdrop {
+  animation: backdrop-fade-out 0.3s ease-out;
+}
+
+.dialog::-webkit-backdrop {
+  background-color: rgb(0 0 0/25%);
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0/25%);
+}
+
+.dialogContent {
+  height: 100%;
+}
+
+.dialogBody {
+  flex: 1 1;
+  padding: var(--space-6x) var(--space-8x);
+}
+
+.dialogFooter {
+  border-block-start: 1px solid var(--color-border-primary-default);
+  box-shadow: 0 -4px 8px 0.5px rgb(135 141 162/16%);
+  padding: var(--space-6x) var(--space-8x);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3x);
+}
+
+.dialogFooter a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.6rem;
+}
+
+@media (min-width: 513px) {
+  .dialogFooter {
+    align-items: center;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-out {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes backdrop-fade-in {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes backdrop-fade-out {
+  to {
+    opacity: 0;
+  }
+}

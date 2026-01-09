@@ -1,0 +1,22 @@
+.section {
+  color: var(--color-text-primary-default);
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+}
+
+.background img,
+.background picture {
+  height: 100%;
+  width: 100%;
+}
+
+.background + * {
+  position: relative;
+}
+
+.section:has(> .background) {
+  position: relative;
+}

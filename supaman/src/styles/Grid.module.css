@@ -1,0 +1,18 @@
+.grid {
+  --_columns: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--_columns), minmax(0, 1fr));
+  gap: var(--_row-gap, var(--_gap, 0)) var(--_col-gap, var(--_gap, 0));
+}
+
+@media (min-width: 1081px) {
+  .grid {
+    --_columns: 2;
+  }
+}
+
+@media (min-width: 1081px) {
+  .isReversed > :last-child {
+    order: -1;
+  }
+}

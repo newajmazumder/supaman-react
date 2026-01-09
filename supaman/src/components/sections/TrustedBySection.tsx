@@ -1,17 +1,20 @@
+import styles from "./TrustedBySection.module.css";
+import sectionStyles from "../../styles/Section.module.css";
+
 export default function TrustedBySection() {
   return (
     <>
-      <section className="section_section___xslj">
-        <div className="content-wrapper_contentWrapper__9WGiY trusted-by_trustedBy__TOncI page_trustedBy__kAohX">
-          <p className="trusted-by_heading__5rgD1">
+      <section className={sectionStyles.section}>
+        <div className={`${styles.contentWrapper} ${styles.page} ${styles.section}`}>
+          <p className={styles.heading}>
             Trusted by the most innovative companies in the world
           </p>
-          <div className="asset-grid_container__LJXUd">
-            <div className="asset-grid_cell__EbKOr">
-              <picture className="asset-grid_asset__ti5n_ asset-grid_fadeIn__FjUP_">
+          <div className={styles.grid}>
+            <div className={styles.cell}>
+              <picture className={styles.asset}>
                 <img
                   alt="OpenAI"
-                  className="image_contain__NKbgm"
+                  className={styles.image}
                   src="/assets/images/trustedby-logo-openai.svg"
                   width="228"
                   height="80"
@@ -21,11 +24,11 @@ export default function TrustedBySection() {
                 />
               </picture>
             </div>
-            <div className="asset-grid_cell__EbKOr">
-              <picture className="asset-grid_asset__ti5n_ asset-grid_fadeIn__FjUP_">
+            <div className={styles.cell}>
+              <picture className={styles.asset}>
                 <img
                   alt="Figma"
-                  className="image_contain__NKbgm"
+                  className={styles.image}
                   src="/assets/images/trustedby-logo-figma.svg"
                   width="228"
                   height="80"
@@ -35,11 +38,11 @@ export default function TrustedBySection() {
                 />
               </picture>
             </div>
-            <div className="asset-grid_cell__EbKOr">
-              <picture className="asset-grid_asset__ti5n_ asset-grid_fadeIn__FjUP_">
+            <div className={styles.cell}>
+              <picture className={styles.asset}>
                 <img
                   alt="HubSpot"
-                  className="image_contain__NKbgm"
+                  className={styles.image}
                   src="/assets/images/trustedby-logo-hubspot.svg"
                   width="228"
                   height="80"
@@ -49,11 +52,11 @@ export default function TrustedBySection() {
                 />
               </picture>
             </div>
-            <div className="asset-grid_cell__EbKOr">
-              <picture className="asset-grid_asset__ti5n_ asset-grid_fadeIn__FjUP_">
+            <div className={styles.cell}>
+              <picture className={styles.asset}>
                 <img
                   alt="Doordash"
-                  className="image_contain__NKbgm"
+                  className={styles.image}
                   src="/assets/images/trustedby-logo-doordash.svg"
                   width="228"
                   height="80"
@@ -63,11 +66,11 @@ export default function TrustedBySection() {
                 />
               </picture>
             </div>
-            <div className="asset-grid_cell__EbKOr">
-              <picture className="asset-grid_asset__ti5n_ asset-grid_fadeIn__FjUP_">
+            <div className={styles.cell}>
+              <picture className={styles.asset}>
                 <img
                   alt="Expensify"
-                  className="image_contain__NKbgm"
+                  className={styles.image}
                   src="/assets/images/trustedby-logo-expensify.svg"
                   width="228"
                   height="80"
@@ -77,11 +80,11 @@ export default function TrustedBySection() {
                 />
               </picture>
             </div>
-            <div className="asset-grid_cell__EbKOr">
-              <picture className="asset-grid_asset__ti5n_ asset-grid_fadeIn__FjUP_">
+            <div className={styles.cell}>
+              <picture className={styles.asset}>
                 <img
                   alt="Eventbrite"
-                  className="image_contain__NKbgm"
+                  className={styles.image}
                   src="/assets/images/trustedby-logo-eventbrite.svg"
                   width="228"
                   height="80"
