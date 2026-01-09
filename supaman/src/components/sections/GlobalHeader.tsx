@@ -1,7 +1,34 @@
+import { useRef } from "react";
 import styles from "./GlobalHeader.module.css";
 import navStyles from "../../styles/NavLinks.module.css";
 
 export default function GlobalHeader() {
+  const dialogRef = useRef<HTMLDialogElement | null>(null);
+
+  const openMenu = () => {
+    const dialog = dialogRef.current;
+    if (!dialog) {
+      return;
+    }
+    if (typeof dialog.showModal === "function") {
+      if (!dialog.open) {
+        dialog.showModal();
+      }
+      return;
+    }
+    dialog.setAttribute("open", "");
+  };
+
+  const closeMenu = () => {
+    const dialog = dialogRef.current;
+    if (!dialog) {
+      return;
+    }
+    if (dialog.open) {
+      dialog.close();
+    }
+  };
+
   return (
     <>
       {/* Sticky navigation header (styles come from scraped CSS assets). */}
@@ -80,7 +107,7 @@ export default function GlobalHeader() {
               </a>
             </div>
             <div className={styles.menuButton}>
-              <button className="button_unstyled__Gf24r">
+              <button className="button_unstyled__Gf24r" onClick={openMenu}>
                 <span className="button_buttonContent__3qg6Y">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +120,16 @@ export default function GlobalHeader() {
                 </span>
               </button>
             </div>
-            <dialog className={styles.dialog}>
+            <dialog
+              className={styles.dialog}
+              ref={dialogRef}
+              onCancel={closeMenu}
+              onClick={(event) => {
+                if (event.target === event.currentTarget) {
+                  closeMenu();
+                }
+              }}
+            >
               <div className={`${styles.column} ${styles.dialogContent}`}>
                 <header className={styles.header}>
                   <div className={`${styles.contentWrapper} ${styles.headerContent}`}>
@@ -109,7 +145,7 @@ export default function GlobalHeader() {
                       </svg>
                     </a>
                     <div className={styles.ctas}>
-                      <button className="button_unstyled__Gf24r">
+                      <button className="button_unstyled__Gf24r" onClick={closeMenu}>
                         <span className="button_buttonContent__3qg6Y">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
