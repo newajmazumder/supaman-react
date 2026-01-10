@@ -1,4 +1,4 @@
-.banner_banner__XIftH {
+.banner {
   border-radius: 12px;
   color: var(--color-text-primary-default);
   padding: var(--space-3x);
@@ -6,15 +6,15 @@
   line-height: 120%;
   letter-spacing: -0.0225em;
 }
-.banner_actionLink__OoXpl {
+.bannerActionLink {
   display: flex;
   align-items: center;
   gap: var(--space-1x);
 }
-.banner_actionLinkIcon__WOzlr {
+.bannerActionLinkIcon {
   transition: translate 0.3s ease-in-out;
 }
-.banner_actionLink__OoXpl:hover .banner_actionLinkIcon__WOzlr {
+.bannerActionLink:hover .bannerActionLinkIcon {
   translate: 4px;
 }
 /*# sourceMappingURL=346f277257f21704.css.map*/

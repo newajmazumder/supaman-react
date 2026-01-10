@@ -1,46 +1,46 @@
 @layer components {
   @layer text {
-    .text_text__RO8_0 {
+    .text_text {
       font-weight: var(--font-weight-regular);
       font-size: var(--font-size-16);
       line-height: var(--line-height-default);
       max-width: min(90vw, 90rem);
     }
-    .text_labelSmall__VQCgK {
+    .text_labelSmall {
       font-size: var(--font-size-12);
       line-height: 1.8rem;
     }
-    .text_labelMedium__fm1P_,
-    .text_labelSmall__VQCgK {
+    .text_labelMedium,
+    .text_labelSmall {
       font-weight: var(--font-weight-regular);
       font-family: var(--font-family-mono);
     }
-    .text_labelMedium__fm1P_ {
+    .text_labelMedium {
       font-size: var(--font-size-14);
       line-height: 2.1rem;
     }
-    .text_bodySmall__O4G19 {
+    .text_bodySmall {
       font-size: var(--font-size-14);
       line-height: 1.8rem;
     }
-    .text_bodyMedium__dDqhi,
-    .text_bodySmall__O4G19 {
+    .text_bodyMedium,
+    .text_bodySmall {
       color: var(--color-text-subdued-default);
       font-weight: var(--font-weight-regular);
       font-family: var(--font-family-serif);
     }
-    .text_bodyMedium__dDqhi {
+    .text_bodyMedium {
       font-size: var(--font-size-16);
       line-height: 2.1rem;
     }
-    .text_bodyLarge__tZ_zL {
+    .text_bodyLarge {
       color: var(--color-text-subdued-default);
       font-weight: var(--font-weight-regular);
       font-size: var(--font-size-18);
       line-height: 2.4rem;
       font-family: var(--font-family-serif);
     }
-    .text_bodyXlarge__7xrNR {
+    .text_bodyXlarge {
       color: var(--color-text-subdued-default);
       font-weight: var(--font-weight-regular);
       font-size: var(--font-size-20);
@@ -51,7 +51,7 @@
         line-height: 2.8rem;
       }
     }
-    .text_headerSmall__q_Fy3 {
+    .text_headerSmall {
       font-weight: var(--font-weight-semibold);
       font-size: var(--font-size-22);
       line-height: 2.6rem;
@@ -69,7 +69,7 @@
         line-height: 3.2rem;
       }
     }
-    .text_headerMedium__CDLUH {
+    .text_headerMedium {
       font-weight: var(--font-weight-medium);
       font-size: var(--font-size-28);
       line-height: 3.2rem;
@@ -87,7 +87,7 @@
         line-height: 4.4rem;
       }
     }
-    .text_headerLarge__NqQNP {
+    .text_headerLarge {
       font-weight: var(--font-weight-medium);
       font-size: var(--font-size-30);
       line-height: 3.4rem;
@@ -105,7 +105,7 @@
         line-height: 5.3rem;
       }
     }
-    .text_headerXlarge__xlKTX {
+    .text_headerXlarge {
       font-weight: var(--font-weight-medium);
       font-size: var(--font-size-36);
       line-height: 4rem;
@@ -123,7 +123,7 @@
         line-height: 6.3rem;
       }
     }
-    .text_jumbo1__Q9jZ4 {
+    .text_jumbo1 {
       font-weight: var(--font-weight-medium);
       font-size: var(--font-size-40);
       line-height: 4.4rem;
@@ -141,7 +141,7 @@
         line-height: 7.6rem;
       }
     }
-    .text_jumbo2__EyaRn {
+    .text_jumbo2 {
       font-weight: var(--font-weight-medium);
       font-size: var(--font-size-44);
       line-height: 4.8rem;
@@ -159,16 +159,16 @@
         line-height: 9rem;
       }
     }
-    .text_fontWeightRegular__x7Y7W {
+    .text_fontWeightRegular {
       font-weight: var(--font-weight-regular);
     }
-    .text_fontWeightMedium__olFcd {
+    .text_fontWeightMedium {
       font-weight: var(--font-weight-medium);
     }
-    .text_fontWeightSemibold__Qj9hZ {
+    .text_fontWeightSemibold {
       font-weight: var(--font-weight-semibold);
     }
-    .text_fontWeightBold__cOCKz {
+    .text_fontWeightBold {
       font-weight: var(--font-weight-bold);
     }
   }
