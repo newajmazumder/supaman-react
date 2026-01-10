@@ -1,6 +1,9 @@
 import { useRef } from "react";
 import styles from "./GlobalHeader.module.css";
 import navStyles from "../../styles/NavLinks.module.css";
+import textBase from "../../styles/Text.module.css";
+import buttonStyles from "../../styles/Button.module.css";
+import linkStyles from "../../styles/Link.module.css";
 
 export default function GlobalHeader() {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
@@ -34,7 +37,7 @@ export default function GlobalHeader() {
       {/* Sticky navigation header (styles come from scraped CSS assets). */}
       <header className={styles.header} data-global-header="true">
         <div className={`${styles.contentWrapper} ${styles.headerContent}`}>
-          <a className={`link_link__AAIEV ${styles.logo}`} href="/">
+          <a className={`${linkStyles.link} ${styles.logo}`} href="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="25"
@@ -49,9 +52,9 @@ export default function GlobalHeader() {
             <ul className={`${navStyles.navList} ${navStyles.primary}`}>
               <li className="">
                 <div aria-expanded="false" aria-haspopup="menu" id="«R1l9mH1»">
-                  <button className={`button_unstyled__Gf24r ${navStyles.navLink}`}>
-                    <span className="button_buttonContent__3qg6Y">
-                      <span className="text_text__RO8_0">Product</span>
+                  <button className={`${buttonStyles.unstyled} ${navStyles.navLink}`}>
+                    <span className={buttonStyles.buttonContent}>
+                      <span className={`${textBase.text}`}>Product</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="10"
@@ -66,19 +69,19 @@ export default function GlobalHeader() {
               </li>
               <li className="">
                 <a
-                  className={`link_link__AAIEV ${navStyles.navLink}`}
+                  className={`${linkStyles.link} ${navStyles.navLink}`}
                   href="/solutions/enterprise"
                 >
                   Enterprise
                 </a>
               </li>
               <li className="">
-                <a className={`link_link__AAIEV ${navStyles.navLink}`} href="/plans">
+                <a className={`${linkStyles.link} ${navStyles.navLink}`} href="/plans">
                   Pricing
                 </a>
               </li>
               <li className="">
-                <a className={`link_link__AAIEV ${navStyles.navLink}`} href="/contact">
+                <a className={`${linkStyles.link} ${navStyles.navLink}`} href="/contact">
                   Contact us
                 </a>
               </li>
@@ -87,28 +90,32 @@ export default function GlobalHeader() {
           <div className={styles.ctas}>
             <div className={styles.ctaButtons}>
               <a
-                className="link_link__AAIEV button_unstyled__Gf24r"
+                className={`${linkStyles.link} ${buttonStyles.unstyled}`}
                 aria-disabled="false"
                 data-nav-link="true"
                 href="https://superhuman.com/auth/signin"
               >
-                <span className="button_buttonContent__3qg6Y">
-                  <span className="text_text__RO8_0 button_text__zGLt3">Log in</span>
+                <span className={buttonStyles.buttonContent}>
+                  <span className={`${textBase.text} ${buttonStyles.text} ${styles.logInText}`}>
+                    Log in
+                  </span>
                 </span>
               </a>
               <a
-                className="link_link__AAIEV button_button__RzPSK button_primaryMysteria__gdDUj button_compact__d5yM_"
+                className={`${linkStyles.link} ${buttonStyles.button} ${buttonStyles.primaryMysteria} ${buttonStyles.compact} ${styles.signUpButton}`}
                 aria-disabled="false"
                 href="https://superhuman.com/auth/signup?screen_hint=signup"
               >
-                <span className="button_buttonContent__3qg6Y">
-                  <span className="text_text__RO8_0 button_text__zGLt3">Sign up</span>
+                <span className={buttonStyles.buttonContent}>
+                  <span className={`${textBase.text} ${buttonStyles.text} ${styles.signUpText}`}>
+                    Sign up
+                  </span>
                 </span>
               </a>
             </div>
             <div className={styles.menuButton}>
-              <button className="button_unstyled__Gf24r" onClick={openMenu}>
-                <span className="button_buttonContent__3qg6Y">
+              <button className={buttonStyles.unstyled} onClick={openMenu}>
+                <span className={buttonStyles.buttonContent}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="42"
@@ -133,7 +140,7 @@ export default function GlobalHeader() {
               <div className={`${styles.column} ${styles.dialogContent}`}>
                 <header className={styles.header}>
                   <div className={`${styles.contentWrapper} ${styles.headerContent}`}>
-                    <a className={`link_link__AAIEV ${styles.logo}`} href="/">
+                    <a className={`${linkStyles.link} ${styles.logo}`} href="/">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="25"
@@ -145,8 +152,8 @@ export default function GlobalHeader() {
                       </svg>
                     </a>
                     <div className={styles.ctas}>
-                      <button className="button_unstyled__Gf24r" onClick={closeMenu}>
-                        <span className="button_buttonContent__3qg6Y">
+                      <button className={buttonStyles.unstyled} onClick={closeMenu}>
+                        <span className={buttonStyles.buttonContent}>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="42"
@@ -164,9 +171,9 @@ export default function GlobalHeader() {
                   <nav className="">
                     <ul className={`${navStyles.navList} ${navStyles.secondary}`}>
                       <li className={navStyles.navListItem}>
-                        <button className={`button_unstyled__Gf24r ${navStyles.navLink}`}>
-                          <span className="button_buttonContent__3qg6Y">
-                            <span className="text_text__RO8_0">Product</span>
+                        <button className={`${buttonStyles.unstyled} ${navStyles.navLink}`}>
+                          <span className={buttonStyles.buttonContent}>
+                            <span className={`${textBase.text}`}>Product</span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="10"
@@ -184,7 +191,7 @@ export default function GlobalHeader() {
                           <ul className={`${styles.column} ${styles.gap4x}`}>
                             <li className={navStyles.navMenuListItem}>
                               <a
-                                className={`link_link__AAIEV ${navStyles.navLink} ${navStyles.navLinkItem}`}
+                                className={`${linkStyles.link} ${navStyles.navLink} ${navStyles.navLinkItem}`}
                                 href="/products/go-ai-assistant"
                               >
                                 Superhuman Go
@@ -192,7 +199,7 @@ export default function GlobalHeader() {
                             </li>
                             <li className={navStyles.navMenuListItem}>
                               <a
-                                className={`link_link__AAIEV ${navStyles.navLink} ${navStyles.navLinkItem}`}
+                                className={`${linkStyles.link} ${navStyles.navLink} ${navStyles.navLinkItem}`}
                                 href="/products/grammarly"
                               >
                                 Grammarly
@@ -200,7 +207,7 @@ export default function GlobalHeader() {
                             </li>
                             <li className={navStyles.navMenuListItem}>
                               <a
-                                className={`link_link__AAIEV ${navStyles.navLink} ${navStyles.navLinkItem}`}
+                                className={`${linkStyles.link} ${navStyles.navLink} ${navStyles.navLinkItem}`}
                                 href="/products/coda"
                               >
                                 Coda
@@ -208,7 +215,7 @@ export default function GlobalHeader() {
                             </li>
                             <li className={navStyles.navMenuListItem}>
                               <a
-                                className={`link_link__AAIEV ${navStyles.navLink} ${navStyles.navLinkItem}`}
+                                className={`${linkStyles.link} ${navStyles.navLink} ${navStyles.navLinkItem}`}
                                 href="https://superhuman.com/products/mail"
                               >
                                 Superhuman Mail
@@ -216,7 +223,7 @@ export default function GlobalHeader() {
                             </li>
                             <li className={navStyles.navMenuListItem}>
                               <a
-                                className={`link_link__AAIEV ${navStyles.navLink} ${navStyles.navLinkItem}`}
+                                className={`${linkStyles.link} ${navStyles.navLink} ${navStyles.navLinkItem}`}
                                 href="https://superhuman.com/store/agents"
                               >
                                 Agent Store
@@ -227,19 +234,19 @@ export default function GlobalHeader() {
                       </li>
                       <li className={navStyles.navListItem}>
                         <a
-                          className={`link_link__AAIEV ${navStyles.navLink}`}
+                          className={`${linkStyles.link} ${navStyles.navLink}`}
                           href="/solutions/enterprise"
                         >
                           Enterprise
                         </a>
                       </li>
                       <li className={navStyles.navListItem}>
-                        <a className={`link_link__AAIEV ${navStyles.navLink}`} href="/plans">
+                        <a className={`${linkStyles.link} ${navStyles.navLink}`} href="/plans">
                           Pricing
                         </a>
                       </li>
                       <li className={navStyles.navListItem}>
-                        <a className={`link_link__AAIEV ${navStyles.navLink}`} href="/contact">
+                        <a className={`${linkStyles.link} ${navStyles.navLink}`} href="/contact">
                           Contact us
                         </a>
                       </li>
@@ -248,22 +255,30 @@ export default function GlobalHeader() {
                 </div>
                 <footer className={styles.dialogFooter}>
                   <a
-                    className="link_link__AAIEV button_unstyled__Gf24r"
+                    className={`${linkStyles.link} ${buttonStyles.unstyled}`}
                     aria-disabled="false"
                     data-nav-link="true"
                     href="https://superhuman.com/auth/signin"
                   >
-                    <span className="button_buttonContent__3qg6Y">
-                      <span className="text_text__RO8_0 button_text__zGLt3">Log in</span>
+                    <span className={buttonStyles.buttonContent}>
+                      <span
+                        className={`${textBase.text} ${buttonStyles.text} ${styles.logInText}`}
+                      >
+                        Log in
+                      </span>
                     </span>
                   </a>
                   <a
-                    className="link_link__AAIEV button_button__RzPSK button_primaryMysteria__gdDUj button_compact__d5yM_"
+                    className={`${linkStyles.link} ${buttonStyles.button} ${buttonStyles.primaryMysteria} ${buttonStyles.compact} ${styles.signUpButton}`}
                     aria-disabled="false"
                     href="https://superhuman.com/auth/signup?screen_hint=signup"
                   >
-                    <span className="button_buttonContent__3qg6Y">
-                      <span className="text_text__RO8_0 button_text__zGLt3">Sign up</span>
+                    <span className={buttonStyles.buttonContent}>
+                      <span
+                        className={`${textBase.text} ${buttonStyles.text} ${styles.signUpText}`}
+                      >
+                        Sign up
+                      </span>
                     </span>
                   </a>
                 </footer>

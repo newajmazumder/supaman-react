@@ -79,6 +79,14 @@
   border-block: 1px solid var(--color-border-primary-default);
 }
 
+.suiteButton {
+  color: var(--button-background-primary-default);
+}
+
+.suiteButton:hover {
+  color: var(--button-background-primary-default);
+}
+
 @media (min-width: 640px) {
   .contentContainer {
     --heading-font-size: 36px;
@@ -198,6 +206,30 @@
 
 .listItem + .listItem {
   margin-block-start: var(--list-item-margin-block-start);
+}
+
+.twoColumnContainer {
+  display: flex;
+}
+
+@media (max-width: 1080px) {
+  .twoColumnMediumSingleCol {
+    flex-direction: column;
+  }
+}
+
+.twoColumnColumn {
+  flex: 1 1 calc(100% / (12 / var(--column-grid-span, 12)));
+}
+
+.animationVideo {
+  position: relative;
+}
+
+.video {
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
 }
 
 .mediaWrapper,

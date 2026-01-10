@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./SuiteSection.module.css";
+import textBase from "../../styles/Text.module.css";
 import textStyles from "../../styles/HomepageText.module.css";
 import sectionStyles from "../../styles/Section.module.css";
 import gridStyles from "../../styles/Grid.module.css";
+import buttonStyles from "../../styles/Button.module.css";
+import linkStyles from "../../styles/Link.module.css";
 
 const SECTION_IDS = [
   "tabbed-section-superhuman-mail",
@@ -60,20 +63,20 @@ export default function SuiteSection() {
         <div className={`${styles.contentWrapper} ${styles.container}`}>
           <header className={styles.header} ref={tabHeaderRef}>
             <div className={styles.headerContent}>
-              <h2 className={`text_text__RO8_0 ${textStyles.headingMedium}`}>
+              <h2 className={`${textBase.text} ${textStyles.headingMedium}`}>
                 Your Superhuman suite
               </h2>
               <a
-                className="link_link__AAIEV button_button__RzPSK button_secondaryMysteria__aFWKF"
+                className={`${linkStyles.link} ${buttonStyles.button} ${buttonStyles.secondaryMysteria} ${styles.suiteButton}`}
                 aria-disabled="false"
                 href="https://superhuman.com/plans"
               >
-                <span className="button_buttonContent__3qg6Y">Get the suite</span>
+                <span className={buttonStyles.buttonContent}>Get the suite</span>
               </a>
             </div>
             <div className={`${gridStyles.grid} ${styles.nav}`} role="tablist">
               <button
-                className={`button_unstyled__Gf24r ${styles.navItem}${
+                className={`${buttonStyles.unstyled} ${styles.navItem}${
                   activeId === "tabbed-section-superhuman-mail"
                     ? ` ${styles.navItemActive}`
                     : ""
@@ -83,19 +86,19 @@ export default function SuiteSection() {
                 aria-controls="tabbed-section-superhuman-mail"
                 onClick={() => handleNavClick("tabbed-section-superhuman-mail")}
               >
-                <span className="button_buttonContent__3qg6Y">
+                <span className={buttonStyles.buttonContent}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23">
                     <use href="#superhuman-mail-with-background-icon"></use>
                   </svg>
                   <h2
-                    className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.navItemText}`}
+                    className={`${textBase.text} ${textBase.headerSmall} ${textBase.fontWeightRegular} ${styles.navItemText}`}
                   >
                     Mail
                   </h2>
                 </span>
               </button>
               <button
-                className={`button_unstyled__Gf24r ${styles.navItem}${
+                className={`${buttonStyles.unstyled} ${styles.navItem}${
                   activeId === "tabbed-section-grammarly"
                     ? ` ${styles.navItemActive}`
                     : ""
@@ -105,19 +108,19 @@ export default function SuiteSection() {
                 aria-controls="tabbed-section-grammarly"
                 onClick={() => handleNavClick("tabbed-section-grammarly")}
               >
-                <span className="button_buttonContent__3qg6Y">
+                <span className={buttonStyles.buttonContent}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
                     <use href="#grammarly-bubble-icon"></use>
                   </svg>
                   <h2
-                    className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.navItemText}`}
+                    className={`${textBase.text} ${textBase.headerSmall} ${textBase.fontWeightRegular} ${styles.navItemText}`}
                   >
                     Grammarly
                   </h2>
                 </span>
               </button>
               <button
-                className={`button_unstyled__Gf24r ${styles.navItem}${
+                className={`${buttonStyles.unstyled} ${styles.navItem}${
                   activeId === "tabbed-section-coda" ? ` ${styles.navItemActive}` : ""
                 }`}
                 role="tab"
@@ -125,19 +128,19 @@ export default function SuiteSection() {
                 aria-controls="tabbed-section-coda"
                 onClick={() => handleNavClick("tabbed-section-coda")}
               >
-                <span className="button_buttonContent__3qg6Y">
+                <span className={buttonStyles.buttonContent}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19">
                     <use href="#coda-logo-icon"></use>
                   </svg>
                   <h2
-                    className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.navItemText}`}
+                    className={`${textBase.text} ${textBase.headerSmall} ${textBase.fontWeightRegular} ${styles.navItemText}`}
                   >
                     Coda
                   </h2>
                 </span>
               </button>
               <button
-                className={`button_unstyled__Gf24r ${styles.navItem}${
+                className={`${buttonStyles.unstyled} ${styles.navItem}${
                   activeId === "tabbed-section-go" ? ` ${styles.navItemActive}` : ""
                 }`}
                 role="tab"
@@ -145,12 +148,12 @@ export default function SuiteSection() {
                 aria-controls="tabbed-section-go"
                 onClick={() => handleNavClick("tabbed-section-go")}
               >
-                <span className="button_buttonContent__3qg6Y">
+                <span className={buttonStyles.buttonContent}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="17" height="23">
                     <use href="#go-logo-icon"></use>
                   </svg>
                   <h2
-                    className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.navItemText}`}
+                    className={`${textBase.text} ${textBase.headerSmall} ${textBase.fontWeightRegular} ${styles.navItemText}`}
                   >
                     Go
                   </h2>
@@ -167,10 +170,10 @@ export default function SuiteSection() {
               style={{ scrollMarginTop: "120px" }}
             >
               <div
-                className={`two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ ${styles.contentContainer}`}
+                className={`${styles.twoColumnContainer} ${styles.twoColumnMediumSingleCol} ${styles.contentContainer}`}
               >
                 <div
-                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyStart} two-column_column__I_bC4`}
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyStart} ${styles.twoColumnColumn}`}
                   style={{ ColumnGridSpan: "6" }}
                 >
                   <div className={styles.titleWrapper}>
@@ -178,7 +181,7 @@ export default function SuiteSection() {
                       <use href="#superhuman-mail-with-background-icon"></use>
                     </svg>
                     <h2
-                      className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.title}`}
+                      className={`${textBase.text} ${textBase.headerSmall} ${textBase.fontWeightRegular} ${styles.title}`}
                     >
                       Mail
                     </h2>
@@ -186,20 +189,20 @@ export default function SuiteSection() {
                   <div className={`${styles.column} ${styles.contentBody}`}>
                     <div>
                       <h2
-                        className={`text_text__RO8_0 text_headerLarge__NqQNP text_fontWeightRegular__x7Y7W ${styles.heading}`}
+                        className={`${textBase.text} ${textBase.headerLarge} ${textBase.fontWeightRegular} ${styles.heading}`}
                       >
                         The most productive email app ever made
                       </h2>
                     </div>
                     <div className={styles.copyWrapper}>
-                      <p className="text_text__RO8_0 text_bodyMedium__dDqhi">
+                      <p className={`${textBase.text} ${textBase.bodyMedium}`}>
                         Fly through your inbox twice as fast as before, never drop the ball again,
                         and save 4 hours every single week.
                       </p>
                     </div>
                     <div className={styles.linkWrapper}>
                       <a
-                        className={`link_link__AAIEV ${styles.link}`}
+                        className={`${linkStyles.link} ${styles.link}`}
                         href="https://superhuman.com/products/mail"
                       >
                         <span className={styles.linkText}>
@@ -240,13 +243,13 @@ export default function SuiteSection() {
                   </div>
                 </div>
                 <div
-                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyCenter} two-column_column__I_bC4`}
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyCenter} ${styles.twoColumnColumn}`}
                   style={{ ColumnGridSpan: "6" }}
                 >
                   <div className={styles.mediaWrapper}>
-                    <div className={`animation-video_animationVideo__vx3xK ${styles.mediaVideo}`}>
+                    <div className={`${styles.animationVideo} ${styles.mediaVideo}`}>
                       <video
-                        className="video_video__EuXrX"
+                        className={styles.video}
                         autoPlay
                         loop
                         muted
@@ -271,10 +274,10 @@ export default function SuiteSection() {
               style={{ scrollMarginTop: "120px" }}
             >
               <div
-                className={`two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ ${styles.contentContainer}`}
+                className={`${styles.twoColumnContainer} ${styles.twoColumnMediumSingleCol} ${styles.contentContainer}`}
               >
                 <div
-                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyStart} two-column_column__I_bC4`}
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyStart} ${styles.twoColumnColumn}`}
                   style={{ ColumnGridSpan: "6" }}
                 >
                   <div className={styles.titleWrapper}>
@@ -282,7 +285,7 @@ export default function SuiteSection() {
                       <use href="#grammarly-bubble-icon"></use>
                     </svg>
                     <h2
-                      className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.title}`}
+                      className={`${textBase.text} ${textBase.headerSmall} ${textBase.fontWeightRegular} ${styles.title}`}
                     >
                       Grammarly
                     </h2>
@@ -290,20 +293,20 @@ export default function SuiteSection() {
                   <div className={`${styles.column} ${styles.contentBody}`}>
                     <div>
                       <h2
-                        className={`text_text__RO8_0 text_headerLarge__NqQNP text_fontWeightRegular__x7Y7W ${styles.heading}`}
+                        className={`${textBase.text} ${textBase.headerLarge} ${textBase.fontWeightRegular} ${styles.heading}`}
                       >
                         Everyone’s favorite AI writing partner
                       </h2>
                     </div>
                     <div className={styles.copyWrapper}>
-                      <p className="text_text__RO8_0 text_bodyMedium__dDqhi">
+                      <p className={`${textBase.text} ${textBase.bodyMedium}`}>
                         Turn your thoughts into writing that’s clear, credible, and impossible to
                         ignore.
                       </p>
                     </div>
                     <div className={styles.linkWrapper}>
                       <a
-                        className={`link_link__AAIEV ${styles.link}`}
+                        className={`${linkStyles.link} ${styles.link}`}
                         href="https://superhuman.com/products/grammarly"
                       >
                         <span className={styles.linkText}>
@@ -344,13 +347,13 @@ export default function SuiteSection() {
                   </div>
                 </div>
                 <div
-                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyCenter} two-column_column__I_bC4`}
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyCenter} ${styles.twoColumnColumn}`}
                   style={{ ColumnGridSpan: "6" }}
                 >
                   <div className={styles.mediaWrapper}>
-                    <div className={`animation-video_animationVideo__vx3xK ${styles.mediaVideo}`}>
+                    <div className={`${styles.animationVideo} ${styles.mediaVideo}`}>
                       <video
-                        className="video_video__EuXrX"
+                        className={styles.video}
                         autoPlay
                         loop
                         muted
@@ -375,10 +378,10 @@ export default function SuiteSection() {
               style={{ scrollMarginTop: "120px" }}
             >
               <div
-                className={`two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ ${styles.contentContainer}`}
+                className={`${styles.twoColumnContainer} ${styles.twoColumnMediumSingleCol} ${styles.contentContainer}`}
               >
                 <div
-                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyStart} two-column_column__I_bC4`}
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyStart} ${styles.twoColumnColumn}`}
                   style={{ ColumnGridSpan: "6" }}
                 >
                   <div className={styles.titleWrapper}>
@@ -386,7 +389,7 @@ export default function SuiteSection() {
                       <use href="#coda-logo-icon"></use>
                     </svg>
                     <h2
-                      className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.title}`}
+                      className={`${textBase.text} ${textBase.headerSmall} ${textBase.fontWeightRegular} ${styles.title}`}
                     >
                       Coda
                     </h2>
@@ -394,20 +397,20 @@ export default function SuiteSection() {
                   <div className={`${styles.column} ${styles.contentBody}`}>
                     <div>
                       <h2
-                        className={`text_text__RO8_0 text_headerLarge__NqQNP text_fontWeightRegular__x7Y7W ${styles.heading}`}
+                        className={`${textBase.text} ${textBase.headerLarge} ${textBase.fontWeightRegular} ${styles.heading}`}
                       >
                         The all-in-one AI workspace for teams
                       </h2>
                     </div>
                     <div className={styles.copyWrapper}>
-                      <p className="text_text__RO8_0 text_bodyMedium__dDqhi">
+                      <p className={`${textBase.text} ${textBase.bodyMedium}`}>
                         Build everything from wikis, through project plans, to goal trackers —
                         keeping everyone perfectly in sync.
                       </p>
                     </div>
                     <div className={styles.linkWrapper}>
                       <a
-                        className={`link_link__AAIEV ${styles.link}`}
+                        className={`${linkStyles.link} ${styles.link}`}
                         href="https://superhuman.com/products/coda"
                       >
                         <span className={styles.linkText}>
@@ -448,13 +451,13 @@ export default function SuiteSection() {
                   </div>
                 </div>
                 <div
-                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyCenter} two-column_column__I_bC4`}
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyCenter} ${styles.twoColumnColumn}`}
                   style={{ ColumnGridSpan: "6" }}
                 >
                   <div className={styles.mediaWrapper}>
-                    <div className={`animation-video_animationVideo__vx3xK ${styles.mediaVideo}`}>
+                    <div className={`${styles.animationVideo} ${styles.mediaVideo}`}>
                       <video
-                        className="video_video__EuXrX"
+                        className={styles.video}
                         autoPlay
                         loop
                         muted
@@ -479,10 +482,10 @@ export default function SuiteSection() {
               style={{ scrollMarginTop: "120px" }}
             >
               <div
-                className={`two-column_container__mjQRh two-column_mediumSingleCol__zTQo_ ${styles.contentContainer}`}
+                className={`${styles.twoColumnContainer} ${styles.twoColumnMediumSingleCol} ${styles.contentContainer}`}
               >
                 <div
-                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyStart} two-column_column__I_bC4`}
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyStart} ${styles.twoColumnColumn}`}
                   style={{ ColumnGridSpan: "6" }}
                 >
                   <div className={styles.titleWrapper}>
@@ -490,7 +493,7 @@ export default function SuiteSection() {
                       <use href="#go-logo-icon"></use>
                     </svg>
                     <h2
-                      className={`text_text__RO8_0 text_headerSmall__q_Fy3 text_fontWeightRegular__x7Y7W ${styles.title}`}
+                      className={`${textBase.text} ${textBase.headerSmall} ${textBase.fontWeightRegular} ${styles.title}`}
                     >
                       Go
                     </h2>
@@ -498,20 +501,20 @@ export default function SuiteSection() {
                   <div className={`${styles.column} ${styles.contentBody}`}>
                     <div>
                       <h2
-                        className={`text_text__RO8_0 text_headerLarge__NqQNP text_fontWeightRegular__x7Y7W ${styles.heading}`}
+                        className={`${textBase.text} ${textBase.headerLarge} ${textBase.fontWeightRegular} ${styles.heading}`}
                       >
                         AI that actually works in every app you use
                       </h2>
                     </div>
                     <div className={styles.copyWrapper}>
-                      <p className="text_text__RO8_0 text_bodyMedium__dDqhi">
+                      <p className={`${textBase.text} ${textBase.bodyMedium}`}>
                         Go is the proactive AI assistant that knows what you know and offers help
                         without you having to ask.
                       </p>
                     </div>
                     <div className={styles.linkWrapper}>
                       <a
-                        className={`link_link__AAIEV ${styles.link}`}
+                        className={`${linkStyles.link} ${styles.link}`}
                         href="https://superhuman.com/products/go-ai-assistant"
                       >
                         <span className={styles.linkText}>
@@ -552,13 +555,13 @@ export default function SuiteSection() {
                   </div>
                 </div>
                 <div
-                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyCenter} two-column_column__I_bC4`}
+                  className={`${styles.column} ${styles.alignStretch} ${styles.justifyCenter} ${styles.twoColumnColumn}`}
                   style={{ ColumnGridSpan: "6" }}
                 >
                   <div className={styles.mediaWrapper}>
-                    <div className={`animation-video_animationVideo__vx3xK ${styles.mediaVideo}`}>
+                    <div className={`${styles.animationVideo} ${styles.mediaVideo}`}>
                       <video
-                        className="video_video__EuXrX"
+                        className={styles.video}
                         autoPlay
                         loop
                         muted

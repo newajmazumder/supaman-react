@@ -7,6 +7,17 @@
   gap: var(--space-20x);
 }
 
+.ctaButton {
+  --_button-text-color: #0b0b0b;
+  --_button-text-color-hover: #0b0b0b;
+  --_button-text-color-active: #0b0b0b;
+  --_button-text-color-disabled: #0b0b0b;
+}
+
+.ctaButtonText {
+  color: #0b0b0b !important;
+}
+
 .contentWrapper {
   --mobile-padding-inline: var(--space-4x);
   max-width: var(--content-max-width);

@@ -1,0 +1,25 @@
+.link {
+  color: var(--text-link-default);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--text-link-hover);
+}
+
+.link:focus-visible {
+  text-decoration: none;
+}
+
+.link:active {
+  color: var(--text-link-active, var(--text-link-hover));
+  text-decoration: none;
+}
+
+.disabled {
+  color: var(--text-link-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}

@@ -1,0 +1,12 @@
+.imageCover {
+  object-fit: cover;
+}
+
+.imageContain {
+  object-fit: contain;
+}
+
+.responsivePicture {
+  max-width: 100%;
+  height: auto;
+}

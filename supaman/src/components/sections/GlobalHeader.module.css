@@ -73,6 +73,26 @@
   display: none;
 }
 
+.header[data-header-variant="transparent"] .logInText {
+  color: #ffffff;
+}
+
+.header[data-header-variant="transparent"] .signUpText {
+  color: #0b0b0b !important;
+}
+
+.header[data-header-variant="transparent"] .signUpButton {
+  color: #0b0b0b !important;
+}
+
+.header[data-header-variant="solid"] .signUpText {
+  color: #ffffff !important;
+}
+
+.header[data-header-variant="solid"] .signUpButton {
+  color: #ffffff !important;
+}
+
 .ctaButtons [data-nav-link] {
   display: inline-flex;
   align-items: center;

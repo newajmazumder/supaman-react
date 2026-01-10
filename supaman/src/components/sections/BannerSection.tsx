@@ -1,38 +1,45 @@
 import type { CSSProperties } from "react";
 import bannerStyles from "./BannerSection.module.css";
+import textBase from "../../styles/Text.module.css";
 import sectionStyles from "../../styles/Section.module.css";
 
 export default function BannerSection() {
   return (
     <>
       {/* Hero section content layer (text + visuals). */}
-      <section className={sectionStyles.section} data-color-scheme="dark">
-        <div className={`${bannerStyles.contentWrapper} page_heroSection__WbWUz ${bannerStyles.hero}`}>
+      <section
+        className={sectionStyles.section}
+        data-color-scheme="dark"
+        data-hero-section="true"
+      >
+        <div
+          className={`${bannerStyles.contentWrapper} ${bannerStyles.heroSectionTimeline} ${bannerStyles.hero}`}
+        >
           <div
             className={bannerStyles.titleGroup}
           >
             <h1
-              className={`text_text__RO8_0 homepage-text_heroTitle__r7q9C ${bannerStyles.title}`}
+              className={`${textBase.text} ${bannerStyles.heroTitle} ${bannerStyles.title}`}
             >
               Superpowers, everywhere you work
             </h1>
             <h2
-              className={`text_text__RO8_0 homepage-text_heroHeading__yqrt3 ${bannerStyles.heading}`}
+              className={`${textBase.text} ${bannerStyles.heroHeading} ${bannerStyles.heading}`}
             >
               Mail, Docs, and AI that works in every app and tab
             </h2>
             <a
-              className="hero-button_heroButton__LEsDD"
+              className={bannerStyles.heroButton}
               href="https://superhuman.com/auth/signup?screen_hint=signup"
               aria-disabled="false"
             >
-              <span className="hero-button_text__vQFmf">Get Superhuman</span>
-              <span className="hero-button_iconContainer__RNDuf">
+              <span className={bannerStyles.heroButtonText}>Get Superhuman</span>
+              <span className={bannerStyles.heroButtonIconContainer}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="18"
-                  className="hero-button_icon__TW5TY"
+                  className={bannerStyles.heroButtonIcon}
                 >
                   <use href="#arrow-right-icon"></use>
                 </svg>
@@ -43,7 +50,7 @@ export default function BannerSection() {
             className={bannerStyles.visualsContainer}
           >
             <figure className={`full-bleed ${bannerStyles.personPictureContainer}`}>
-              <picture className={`picture_responsive__QoHw7 ${bannerStyles.personPicture}`}>
+              <picture className={`${bannerStyles.responsivePicture} ${bannerStyles.personPicture}`}>
                 <source
                   srcSet="/assets/images/person-5.webp__w_375_fm_avif 375w, assets/images/person-5.webp__w_640_fm_avif 640w, assets/images/person-5.webp__w_750_fm_avif 750w, assets/images/person-5.webp__w_768_fm_avif 768w, assets/images/person-5.webp__w_1080_fm_avif 1080w, assets/images/person-5.webp__w_1125_fm_avif 1125w, assets/images/person-5.webp__w_1280_fm_avif 1280w, assets/images/person-5.webp__w_1536_fm_avif 1536w, assets/images/person-5.webp__w_1920_fm_avif 1920w, assets/images/person-5.webp__w_2160_fm_avif 2160w, assets/images/person-5.webp__w_2304_fm_avif 2304w, assets/images/person-5.webp__w_3240_fm_avif 3240w"
                   sizes="(max-width: 1024px) 100vw, (min-width: 1280px) 640px, (min-width: 1440px) 640px, 100vw"
@@ -60,7 +67,7 @@ export default function BannerSection() {
                 />
                 <img
                   alt="Person thinking"
-                  className="image_cover__p04Oj picture_responsive__QoHw7"
+                  className={`${bannerStyles.imageCover} ${bannerStyles.responsivePicture}`}
                   src="/assets/images/person-5.webp__w_1080"
                   width="822"
                   height="660"
@@ -73,7 +80,7 @@ export default function BannerSection() {
             <div className={bannerStyles.visualGroup1}>
               <div className={bannerStyles.visualRow}>
                 <div
-                  className={`hero-card_card__SIZev chat_chat__QS9Eh ${bannerStyles.visual} ${bannerStyles.visual1}`}
+                  className={`${bannerStyles.heroCardBase} ${bannerStyles.chatCard} ${bannerStyles.visual} ${bannerStyles.visual1}`}
                   style={{ "--index": 1 } as CSSProperties}
                 >
                   <div className={bannerStyles.columnGap4x}>
@@ -81,22 +88,28 @@ export default function BannerSection() {
                       xmlns="http://www.w3.org/2000/svg"
                       width="17"
                       height="24"
-                      className="chat_heroIcon__yDL04"
+                      className={bannerStyles.chatHeroIcon}
                     >
                       <use href="#hero-icon"></use>
                     </svg>
                     <div className={bannerStyles.columnGap2x}>
-                      <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B chat_message__oorK8">
+                      <span
+                        className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.chatMessage}`}
+                      >
                         Looks like you&#x27;re chatting with Antonio and Laura in the{" "}
                         <span>#launch-project-chat</span> and need to book a meeting. Would you like
                         me to find a good time?
                       </span>
-                      <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B chat_message__oorK8 chat_userMessage__aAHO7">
+                      <span
+                        className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.chatMessage} ${bannerStyles.chatUserMessage}`}
+                      >
                         yes!
                       </span>
-                      <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B chat_message__oorK8 chat_hasSuggestions__5w3Tw">
+                      <span
+                        className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.chatMessage} ${bannerStyles.chatHasSuggestions}`}
+                      >
                         You&#x27;re all available during these times:
-                        <div className={`${bannerStyles.rowCenterGap1x} chat_suggestions__CldPS`}>
+                        <div className={`${bannerStyles.rowCenterGap1x} ${bannerStyles.chatSuggestions}`}>
                           <span className={bannerStyles.rowCenterGap1x}>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -149,16 +162,16 @@ export default function BannerSection() {
                           </span>
                         </div>
                       </span>
-                      <div className="chat_textInput__llIdI">
+                      <div className={bannerStyles.chatTextInput}>
                         <div className={bannerStyles.rowEndSpaceBetweenGap4x}>
-                          <p className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
+                          <p className={`${textBase.text} ${bannerStyles.heroCard}`}>
                             book it for monday
                           </p>
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="15"
                             height="15"
-                            className="chat_sendIcon__5XP1Q"
+                            className={bannerStyles.chatSendIcon}
                           >
                             <use href="#send-icon"></use>
                           </svg>
@@ -168,57 +181,57 @@ export default function BannerSection() {
                   </div>
                 </div>
                 <div
-                  className={`hero-card_card__SIZev agents_agents__3ZOtq ${bannerStyles.visual} ${bannerStyles.visual2}`}
+                  className={`${bannerStyles.heroCardBase} ${bannerStyles.agentsCard} ${bannerStyles.visual} ${bannerStyles.visual2}`}
                   style={{ "--index": 2 } as CSSProperties}
                 >
                   <div className={bannerStyles.columnGap2x}>
-                    <div className={`agents_agent__1dXFp ${bannerStyles.stack}`}>
-                      <div className="agents_selected__1z99W"></div>
+                    <div className={`${bannerStyles.agentItem} ${bannerStyles.stack}`}>
+                      <div className={bannerStyles.agentSelected}></div>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
                         height="24"
-                        className="agents_icon__zvbiq"
+                        className={bannerStyles.agentIcon}
                       >
                         <use href="#hero-icon"></use>
                       </svg>
                     </div>
-                    <div className={`agents_agent__1dXFp ${bannerStyles.stack}`}>
+                    <div className={`${bannerStyles.agentItem} ${bannerStyles.stack}`}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="19"
                         height="18"
-                        className="agents_icon__zvbiq"
+                        className={bannerStyles.agentIcon}
                       >
                         <use href="#grammarly-logo-icon"></use>
                       </svg>
                     </div>
-                    <div className={`agents_agent__1dXFp ${bannerStyles.stack}`}>
+                    <div className={`${bannerStyles.agentItem} ${bannerStyles.stack}`}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="22"
                         height="26"
-                        className="agents_icon__zvbiq"
+                        className={bannerStyles.agentIcon}
                       >
                         <use href="#humanizer-icon"></use>
                       </svg>
                     </div>
-                    <div className={`agents_agent__1dXFp ${bannerStyles.stack}`}>
+                    <div className={`${bannerStyles.agentItem} ${bannerStyles.stack}`}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="22"
                         height="20"
-                        className="agents_icon__zvbiq"
+                        className={bannerStyles.agentIcon}
                       >
                         <use href="#citation-finder-icon"></use>
                       </svg>
                     </div>
-                    <div className={`agents_agent__1dXFp ${bannerStyles.stack}`}>
+                    <div className={`${bannerStyles.agentItem} ${bannerStyles.stack}`}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="21"
                         height="23"
-                        className="agents_icon__zvbiq"
+                        className={bannerStyles.agentIcon}
                       >
                         <use href="#calendar-icon"></use>
                       </svg>
@@ -228,103 +241,103 @@ export default function BannerSection() {
               </div>
               <div className={bannerStyles.mail}>
                 <div
-                  className={`hero-card_card__SIZev mail_mail__WHUsM ${bannerStyles.visual} ${bannerStyles.visual6}`}
+                  className={`${bannerStyles.heroCardBase} ${bannerStyles.mailCard} ${bannerStyles.visual} ${bannerStyles.visual6}`}
                   style={{ "--index": 6 } as CSSProperties}
                 >
-                  <div className="mail_menu__dS5rb"></div>
+                  <div className={bannerStyles.mailMenu}></div>
                   <div className={bannerStyles.rowCenterGap1x}>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
+                    <span className={`${textBase.text} ${bannerStyles.heroCard}`}>
                       Important
                     </span>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
+                    <span className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.mailFadedText}`}>
                       12
                     </span>
                   </div>
                   <div className={bannerStyles.rowCenterGap1x}>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Calendar</span>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
+                    <span className={`${textBase.text} ${bannerStyles.heroCard}`}>Calendar</span>
+                    <span className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.mailFadedText}`}>
                       13
                     </span>
                   </div>
                   <div className={bannerStyles.rowCenterGap1x}>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Docs</span>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
+                    <span className={`${textBase.text} ${bannerStyles.heroCard}`}>Docs</span>
+                    <span className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.mailFadedText}`}>
                       8
                     </span>
                   </div>
                   <div className={bannerStyles.rowCenterGap1x}>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Other</span>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
+                    <span className={`${textBase.text} ${bannerStyles.heroCard}`}>Other</span>
+                    <span className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.mailFadedText}`}>
                       19
                     </span>
                   </div>
-                  <div className="mail_message__d496T mail_selectedMessage__Xicr3"></div>
-                  <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Sarah Kim</span>
-                  <div className={`${bannerStyles.rowCenterGap2x} mail_messageContent__655WM`}>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
+                  <div className={`${bannerStyles.mailMessage} ${bannerStyles.mailSelectedMessage}`}></div>
+                  <span className={`${textBase.text} ${bannerStyles.heroCard}`}>Sarah Kim</span>
+                  <div className={`${bannerStyles.rowCenterGap2x} ${bannerStyles.mailMessageContent}`}>
+                    <span className={`${textBase.text} ${bannerStyles.heroCard}`}>
                       Design Review moved to Thursday
                     </span>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
+                    <span className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.mailFadedText}`}>
                       Hey team, quick heads-up — we&#x27;re pushing the design review to Thursday at
                       2pm.
                     </span>
                   </div>
-                  <div className="mail_message__d496T"></div>
-                  <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
+                  <div className={bannerStyles.mailMessage}></div>
+                  <span className={`${textBase.text} ${bannerStyles.heroCard}`}>
                     James Patel
                   </span>
-                  <div className={`${bannerStyles.rowCenterGap2x} mail_messageContent__655WM`}>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
+                  <div className={`${bannerStyles.rowCenterGap2x} ${bannerStyles.mailMessageContent}`}>
+                    <span className={`${textBase.text} ${bannerStyles.heroCard}`}>
                       Feedback on your client presentation
                     </span>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
+                    <span className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.mailFadedText}`}>
                       Great work on the slides. I added a couple of notes around clarity and flow.
                     </span>
                   </div>
-                  <div className="mail_message__d496T"></div>
-                  <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">Laura Chen</span>
-                  <div className={`${bannerStyles.rowCenterGap2x} mail_messageContent__655WM`}>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
+                  <div className={bannerStyles.mailMessage}></div>
+                  <span className={`${textBase.text} ${bannerStyles.heroCard}`}>Laura Chen</span>
+                  <div className={`${bannerStyles.rowCenterGap2x} ${bannerStyles.mailMessageContent}`}>
+                    <span className={`${textBase.text} ${bannerStyles.heroCard}`}>
                       Coffee next week?
                     </span>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
+                    <span className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.mailFadedText}`}>
                       It&#x27;s been a while since we caught up — are you free for a quick coffee
                       next week?
                     </span>
                   </div>
-                  <div className="mail_message__d496T"></div>
-                  <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">HR Team</span>
-                  <div className={`${bannerStyles.rowCenterGap2x} mail_messageContent__655WM`}>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
+                  <div className={bannerStyles.mailMessage}></div>
+                  <span className={`${textBase.text} ${bannerStyles.heroCard}`}>HR Team</span>
+                  <div className={`${bannerStyles.rowCenterGap2x} ${bannerStyles.mailMessageContent}`}>
+                    <span className={`${textBase.text} ${bannerStyles.heroCard}`}>
                       Reminder: Open enrollment closes Friday
                     </span>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
+                    <span className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.mailFadedText}`}>
                       Don&#x27;t forget to update your benefits selections before the deadline this
                       week.
                     </span>
                   </div>
-                  <div className="mail_message__d496T"></div>
-                  <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
+                  <div className={bannerStyles.mailMessage}></div>
+                  <span className={`${textBase.text} ${bannerStyles.heroCard}`}>
                     Mike Torres
                   </span>
-                  <div className={`${bannerStyles.rowCenterGap2x} mail_messageContent__655WM`}>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
+                  <div className={`${bannerStyles.rowCenterGap2x} ${bannerStyles.mailMessageContent}`}>
+                    <span className={`${textBase.text} ${bannerStyles.heroCard}`}>
                       Sprint planning agenda attached
                     </span>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B mail_fadedText__Bli0f">
+                    <span className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.mailFadedText}`}>
                       Please review the agenda ahead of Monday’s sprint planning meeting.
                     </span>
                   </div>
                 </div>
                 <div
-                  className={`hero-card_card__SIZev tool_tool__lFuFb tool_isScheduler__ifisn ${bannerStyles.visual} ${bannerStyles.visual7}`}
+                  className={`${bannerStyles.heroCardBase} ${bannerStyles.toolCard} ${bannerStyles.toolScheduler} ${bannerStyles.visual} ${bannerStyles.visual7}`}
                   style={{ "--index": 7 } as CSSProperties}
                 >
                   <div className={bannerStyles.rowCenterGap2xWrap}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
                       <use href="#sparkle-icon"></use>
                     </svg>
-                    <p className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
+                    <p className={`${textBase.text} ${bannerStyles.heroCard}`}>
                       Schedule 15 minutes for a quick meeting with Mike
                     </p>
                   </div>
@@ -333,20 +346,20 @@ export default function BannerSection() {
             </div>
             <div className={bannerStyles.visualGroup2}>
               <div
-                className={`hero-card_card__SIZev tool_tool__lFuFb ${bannerStyles.visual} ${bannerStyles.visual3}`}
+                className={`${bannerStyles.heroCardBase} ${bannerStyles.toolCard} ${bannerStyles.visual} ${bannerStyles.visual3}`}
                 style={{ "--index": 3 } as CSSProperties}
               >
                 <div className={bannerStyles.rowCenterGap2x}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19">
                     <use href="#reader-reactions-icon"></use>
                   </svg>
-                  <p className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
+                  <p className={`${textBase.text} ${bannerStyles.heroCard}`}>
                     Tailor this language for executives
                   </p>
                 </div>
               </div>
               <div
-                className={`hero-card_card__SIZev editor_editor__lP_f3 ${bannerStyles.visual} ${bannerStyles.visual4}`}
+                className={`${bannerStyles.heroCardBase} ${bannerStyles.editorCard} ${bannerStyles.visual} ${bannerStyles.visual4}`}
                 style={{ "--index": 4 } as CSSProperties}
               >
                 <div className={bannerStyles.columnGap4x}>
@@ -354,10 +367,12 @@ export default function BannerSection() {
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                       <use href="#home-icon"></use>
                     </svg>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B editor_toolbarText___BldC">
+                    <span className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.editorToolbarText}`}>
                       Team workspace
                     </span>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B editor_toolbarText___BldC editor_toolbarTextEnd__it_0A">
+                    <span
+                      className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.editorToolbarText} ${bannerStyles.editorToolbarTextEnd}`}
+                    >
                       Share
                     </span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
@@ -368,10 +383,10 @@ export default function BannerSection() {
                     </svg>
                   </div>
                   <div className={bannerStyles.columnGap3x}>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
+                    <span className={`${textBase.text} ${bannerStyles.heroCard}`}>
                       Streamlining Team Documentation
                     </span>
-                    <span className="text_text__RO8_0 homepage-text_heroCard__NMA8B editor_editorText__ZoEil">
+                    <span className={`${textBase.text} ${bannerStyles.heroCard} ${bannerStyles.editorText}`}>
                       I&#x27;ve been thinking about how our team can streamline the onboarding
                       process for <u>new-hires</u>.{" "}
                       <span>
@@ -381,8 +396,8 @@ export default function BannerSection() {
                       more real-world examples, I think it&#x27;ll cut down on <u>repetative</u>{" "}
                       questions and help people ramp up faster.
                     </span>
-                    <div className={`${bannerStyles.rowCenter} editor_toolbar__jLb_Y`}>
-                      <div className={`${bannerStyles.rowCenterGap0_5x} editor_toolbarItem__roylq`}>
+                    <div className={`${bannerStyles.rowCenter} ${bannerStyles.editorToolbar}`}>
+                      <div className={`${bannerStyles.rowCenterGap0_5x} ${bannerStyles.editorToolbarItem}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
                           <use href="#font-icon"></use>
                         </svg>
@@ -390,32 +405,32 @@ export default function BannerSection() {
                           xmlns="http://www.w3.org/2000/svg"
                           width="10"
                           height="10"
-                          className="editor_arrowDown__YHEBM"
+                          className={bannerStyles.editorArrowDown}
                         >
                           <use href="#arrow-down-icon"></use>
                         </svg>
                       </div>
-                      <div className={`${bannerStyles.rowCenterGap0_5x} editor_toolbarItem__roylq`}>
+                      <div className={`${bannerStyles.rowCenterGap0_5x} ${bannerStyles.editorToolbarItem}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
                           <use href="#bold-icon"></use>
                         </svg>
                       </div>
-                      <div className={`${bannerStyles.rowCenterGap0_5x} editor_toolbarItem__roylq`}>
+                      <div className={`${bannerStyles.rowCenterGap0_5x} ${bannerStyles.editorToolbarItem}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                           <use href="#italic-icon"></use>
                         </svg>
                       </div>
-                      <div className={`${bannerStyles.rowCenterGap0_5x} editor_toolbarItem__roylq`}>
+                      <div className={`${bannerStyles.rowCenterGap0_5x} ${bannerStyles.editorToolbarItem}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
                           <use href="#underline-icon"></use>
                         </svg>
                       </div>
-                      <div className={`${bannerStyles.rowCenterGap0_5x} editor_toolbarItem__roylq`}>
+                      <div className={`${bannerStyles.rowCenterGap0_5x} ${bannerStyles.editorToolbarItem}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16">
                           <use href="#strikethrough-icon"></use>
                         </svg>
                       </div>
-                      <div className={`${bannerStyles.rowCenterGap0_5x} editor_toolbarItem__roylq`}>
+                      <div className={`${bannerStyles.rowCenterGap0_5x} ${bannerStyles.editorToolbarItem}`}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                           <use href="#align-start-icon"></use>
                         </svg>
@@ -423,7 +438,7 @@ export default function BannerSection() {
                           xmlns="http://www.w3.org/2000/svg"
                           width="10"
                           height="10"
-                          className="editor_arrowDown__YHEBM"
+                          className={bannerStyles.editorArrowDown}
                         >
                           <use href="#arrow-down-icon"></use>
                         </svg>
@@ -433,27 +448,27 @@ export default function BannerSection() {
                 </div>
               </div>
               <div
-                className={`hero-card_card__SIZev tool_tool__lFuFb ${bannerStyles.visual} ${bannerStyles.visual5}`}
+                className={`${bannerStyles.heroCardBase} ${bannerStyles.toolCard} ${bannerStyles.visual} ${bannerStyles.visual5}`}
                 style={{ "--index": 5 } as CSSProperties}
               >
                 <div className={bannerStyles.rowCenterGap2x}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18">
                     <use href="#grammarly-logo-icon"></use>
                   </svg>
-                  <p className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
+                  <p className={`${textBase.text} ${bannerStyles.heroCard}`}>
                     Proofread with Grammarly
                   </p>
                 </div>
               </div>
               <div
-                className={`hero-card_card__SIZev tool_tool__lFuFb tool_isScheduler__ifisn ${bannerStyles.visual} ${bannerStyles.visual8}`}
+                className={`${bannerStyles.heroCardBase} ${bannerStyles.toolCard} ${bannerStyles.toolScheduler} ${bannerStyles.visual} ${bannerStyles.visual8}`}
                 style={{ "--index": 6 } as CSSProperties}
               >
                 <div className={bannerStyles.rowCenterGap2xWrap}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17">
                     <use href="#sparkle-icon"></use>
                   </svg>
-                  <p className="text_text__RO8_0 homepage-text_heroCard__NMA8B">
+                  <p className={`${textBase.text} ${bannerStyles.heroCard}`}>
                     Schedule 15 minutes for a quick meeting with Mike
                   </p>
                 </div>

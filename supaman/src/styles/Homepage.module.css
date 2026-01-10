@@ -67,10 +67,6 @@
   }
 }
 
-.homepage :global(.hero_hero__RUK01) {
-  color: var(--color-text-primary-default);
-}
-
 .multiSectionBackground {
   background-color: var(--neutral-10);
 }

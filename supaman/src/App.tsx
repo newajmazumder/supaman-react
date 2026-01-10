@@ -77,6 +77,7 @@ export default function App() {
         progress === 0 || progress >= 0.99 ? "initial" : "/* empty string */"
       );
       header.style.setProperty("color-scheme", progress >= 0.6 ? "light" : "dark");
+      header.dataset.headerVariant = progress >= 0.6 ? "solid" : "transparent";
     };
 
     const onScroll = () => {

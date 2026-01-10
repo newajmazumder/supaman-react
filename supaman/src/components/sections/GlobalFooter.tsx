@@ -1,5 +1,7 @@
 import styles from "./GlobalFooter.module.css";
 import navStyles from "../../styles/NavLinks.module.css";
+import textBase from "../../styles/Text.module.css";
+import linkStyles from "../../styles/Link.module.css";
 
 export default function GlobalFooter() {
   return (
@@ -10,7 +12,7 @@ export default function GlobalFooter() {
             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="168" fill="currentColor">
               <use href="#superhuman-logo"></use>
             </svg>
-            <h3 className={`text_text__RO8_0 ${styles.logoTitle}`}>
+            <h3 className={`${textBase.text} ${styles.logoTitle}`}>
               Superpowers,
               <br />
               everywhere you work
@@ -19,14 +21,14 @@ export default function GlobalFooter() {
           <nav className={styles.contentNav}>
             <div className={styles.contentItem}>
               <h3
-                className={`text_text__RO8_0 text_fontWeightSemibold__Qj9hZ ${styles.contentItemTitle}`}
+                className={`${textBase.text} ${textBase.fontWeightSemibold} ${styles.contentItemTitle}`}
               >
                 Products
               </h3>
               <ul className={`${styles.column} ${styles.gap4x}`}>
                 <li>
                   <a
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                     href="/products/go-ai-assistant"
                   >
                     Superhuman Go
@@ -34,7 +36,7 @@ export default function GlobalFooter() {
                 </li>
                 <li>
                   <a
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                     href="/products/grammarly"
                   >
                     Grammarly
@@ -42,7 +44,7 @@ export default function GlobalFooter() {
                 </li>
                 <li>
                   <a
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                     href="/products/coda"
                   >
                     Coda
@@ -50,7 +52,7 @@ export default function GlobalFooter() {
                 </li>
                 <li>
                   <a
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                     href="https://superhuman.com/products/mail"
                   >
                     Superhuman Mail
@@ -58,7 +60,7 @@ export default function GlobalFooter() {
                 </li>
                 <li>
                   <a
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                     href="https://superhuman.com/store/agents"
                   >
                     Agent Store
@@ -68,14 +70,14 @@ export default function GlobalFooter() {
             </div>
             <div className={styles.contentItem}>
               <h3
-                className={`text_text__RO8_0 text_fontWeightSemibold__Qj9hZ ${styles.contentItemTitle}`}
+                className={`${textBase.text} ${textBase.fontWeightSemibold} ${styles.contentItemTitle}`}
               >
                 Company
               </h3>
               <ul className={`${styles.column} ${styles.gap4x}`}>
                 <li>
                   <a
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                     href="/contact"
                   >
                     Contact Us
@@ -83,7 +85,7 @@ export default function GlobalFooter() {
                 </li>
                 <li>
                   <a
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                     href="/support"
                   >
                     Help Center
@@ -92,7 +94,7 @@ export default function GlobalFooter() {
                 <li>
                   <a
                     href="https://job-boards.greenhouse.io/grammarly"
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                   >
                     Careers
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11">
@@ -102,7 +104,7 @@ export default function GlobalFooter() {
                 </li>
                 <li>
                   <a
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                     href="https://superhuman.com/partners"
                   >
                     Partners
@@ -112,14 +114,14 @@ export default function GlobalFooter() {
             </div>
             <div className={styles.contentItem}>
               <h3
-                className={`text_text__RO8_0 text_fontWeightSemibold__Qj9hZ ${styles.contentItemTitle}`}
+                className={`${textBase.text} ${textBase.fontWeightSemibold} ${styles.contentItemTitle}`}
               >
                 Legal
               </h3>
               <ul className={`${styles.column} ${styles.gap4x}`}>
                 <li>
                   <a
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                     href="/legal/terms"
                   >
                     Terms
@@ -128,7 +130,7 @@ export default function GlobalFooter() {
                 <li>
                   <a
                     href="https://www.grammarly.com/privacy-policy"
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                   >
                     Privacy Policy
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11">
@@ -138,7 +140,7 @@ export default function GlobalFooter() {
                 </li>
                 <li>
                   <a
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                     href="/legal/trust"
                   >
                     Trust
@@ -146,7 +148,7 @@ export default function GlobalFooter() {
                 </li>
                 <li>
                   <a
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                     href="/legal/terms/customer-business-agreement"
                   >
                     Customer Business Agreement
@@ -154,7 +156,7 @@ export default function GlobalFooter() {
                 </li>
                 <li>
                   <a
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink} ${styles.privacyChoicesNavLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink} ${styles.privacyChoicesNavLink}`}
                     href="/render#"
                   >
                     Cookies Preferences Center
@@ -164,7 +166,7 @@ export default function GlobalFooter() {
             </div>
             <div className={styles.contentItem}>
               <h3
-                className={`text_text__RO8_0 text_fontWeightSemibold__Qj9hZ ${styles.contentItemTitle}`}
+                className={`${textBase.text} ${textBase.fontWeightSemibold} ${styles.contentItemTitle}`}
               >
                 Connect
               </h3>
@@ -172,7 +174,7 @@ export default function GlobalFooter() {
                 <li>
                   <a
                     href="https://www.linkedin.com/company/superhumanhq"
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -189,7 +191,7 @@ export default function GlobalFooter() {
                 <li>
                   <a
                     href="https://x.com/Superhuman"
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -206,7 +208,7 @@ export default function GlobalFooter() {
                 <li>
                   <a
                     href="https://www.tiktok.com/@superhumanhq?lang=e"
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +225,7 @@ export default function GlobalFooter() {
                 <li>
                   <a
                     href="https://www.instagram.com/superhuman__hq/?hl=en"
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -240,7 +242,7 @@ export default function GlobalFooter() {
                 <li>
                   <a
                     href="https://www.threads.com/@superhuman__hq"
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -257,7 +259,7 @@ export default function GlobalFooter() {
                 <li>
                   <a
                     href="https://www.facebook.com/SuperhumanCo"
-                    className={`link_link__AAIEV ${navStyles.navLink} ${styles.navLink}`}
+                    className={`${linkStyles.link} ${navStyles.navLink} ${styles.navLink}`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
